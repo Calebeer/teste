@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>Manual da Planta Saudável 🌱 — Do Básico ao Cultivo Perfeito</title>
+<meta name="description" content="Um guia completo para aprender rega, iluminação, adubação, mudas e cuidados essenciais para suas plantas crescerem fortes e cheias de vida."/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link href="https://fonts.gstatic.com" rel="preconnect" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800;900&family=Cormorant+Garamond:ital,wght@1,600;1,700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --leaf:#4F772D;
+  --leaf-deep:#35521D;
+  --olive:#90A955;
+  --cream:#FFF8E7;
+  --sand:#E8D8B8;
+  --sand-deep:#CDB98F;
+  --rose:#E8AEB7;
+  --rose-deep:#B5697A;
+  --terra:#C97C5D;
+  --terra-deep:#94503A;
+  --soil:#6B4F3A;
+  --soil-deep:#43301F;
+  --muted:#84684F;
+  --text-soft:#5A4534;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;overflow-x:hidden;scroll-behavior:smooth;}
+body{font-family:'Nunito',system-ui,sans-serif;color:var(--soil-deep);background:var(--sand);overflow-x:hidden;font-size:16px;line-height:1.6;}
+img,svg{display:block;max-width:100%;}
+a{color:inherit;text-decoration:none;}
+h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:800;letter-spacing:-.01em;line-height:1.16;}
+:focus-visible{outline:3px solid var(--terra);outline-offset:3px;}
+
+.section{padding:60px 20px;position:relative;}
+.wrap{max-width:1080px;margin:0 auto;position:relative;}
+.wrap-narrow{max-width:680px;margin:0 auto;position:relative;}
+.center{text-align:center;}
+.hand{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:700;}
+
+.s-sand{background:var(--sand);}
+.s-cream{background:var(--cream);}
+.s-leaf{background:var(--leaf);color:var(--cream);}
+.s-soil{background:var(--soil);color:var(--cream);}
+.s-rose{background:var(--rose);color:var(--soil-deep);}
+.s-leaf h2,.s-soil h2{color:var(--cream);}
+
+h2.title{font-size:clamp(26px,6.2vw,38px);margin-bottom:14px;}
+.lead{font-size:16.5px;max-width:560px;margin:0 auto 28px;color:var(--text-soft);}
+.s-leaf .lead,.s-soil .lead{color:#F1E8D0;}
+.note{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:700;font-size:23px;color:var(--terra-deep);margin-bottom:6px;display:block;}
+.s-leaf .note,.s-soil .note{color:var(--rose);}
+.s-rose .note{color:var(--leaf-deep);}
+
+/* ===== botões 3D ===== */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;
+  padding:18px 28px;font-family:'Nunito',sans-serif;font-weight:800;font-size:16px;letter-spacing:.01em;
+  border-radius:16px;border:0;cursor:pointer;position:relative;text-align:center;line-height:1.3;
+  transform:translateY(0);transition:transform .08s ease, box-shadow .08s ease;
+}
+.btn-terra{background:linear-gradient(180deg,#D38C6E,#B86A4B);color:#fff;
+  box-shadow:0 7px 0 var(--terra-deep),0 14px 24px rgba(53,82,29,.35),inset 0 2px 0 rgba(255,255,255,.25);}
+.btn-terra:active{transform:translateY(5px);box-shadow:0 2px 0 var(--terra-deep),0 5px 10px rgba(53,82,29,.3),inset 0 2px 0 rgba(255,255,255,.2);}
+.btn-cream{background:linear-gradient(180deg,#fff,var(--cream));color:var(--leaf-deep);
+  box-shadow:0 7px 0 var(--sand-deep),0 14px 24px rgba(53,82,29,.25),inset 0 2px 0 #fff;}
+.btn-cream:active{transform:translateY(5px);box-shadow:0 2px 0 var(--sand-deep),0 5px 10px rgba(53,82,29,.2);}
+@media (min-width:520px){.btn{width:auto;min-width:320px;}}
+.safe{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:700;font-size:20px;color:var(--muted);margin-top:16px;text-align:center;}
+.s-leaf .safe,.s-soil .safe{color:#E4D9B8;}
+
+/* ===== faixa topo ===== */
+.ribbon-bar{position:sticky;top:0;z-index:50;background:var(--leaf-deep);color:var(--cream);text-align:center;
+  padding:10px 14px;padding-top:calc(10px + env(safe-area-inset-top,0px));font-weight:700;font-size:13.5px;
+  display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;}
+.ribbon-bar .timer{background:var(--terra);color:#fff;padding:3px 12px;border-radius:8px;font-variant-numeric:tabular-nums;font-weight:800;box-shadow:0 3px 0 var(--terra-deep);}
+
+/* ===== hero com guirlanda de folhas ===== */
+.hero{background:var(--leaf);color:var(--cream);padding:0 20px 64px;overflow:hidden;}
+.garland{height:58px;margin:0 -20px 36px;position:relative;
+  background:repeating-linear-gradient(90deg,var(--leaf-deep) 0 46px,var(--leaf) 46px 92px);
+  box-shadow:0 10px 18px rgba(0,0,0,.25);}
+.garland::after{content:"";position:absolute;left:0;right:0;bottom:-18px;height:18px;
+  background:
+    radial-gradient(circle at 23px 0,var(--leaf-deep) 22px,transparent 23px) 0 0/92px 18px repeat-x,
+    radial-gradient(circle at 69px 0,var(--olive) 22px,transparent 23px) 0 0/92px 18px repeat-x;
+  filter:drop-shadow(0 6px 5px rgba(0,0,0,.2));}
+.hero-kicker{display:inline-block;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:700;font-size:26px;color:var(--rose);margin-bottom:6px;}
+.hero-tagline{display:block;font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#E9E3C4;margin-bottom:14px;}
+.hero h1{font-size:clamp(27px,7.2vw,46px);color:var(--cream);margin-bottom:16px;
+  text-shadow:0 1px 0 #2f4a1a,0 2px 0 #2a4217,0 3px 0 #253b14,0 10px 18px rgba(0,0,0,.3);}
+.hero-sub{font-size:17px;color:#F1E8D0;max-width:560px;margin:0 auto 24px;}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:34px;}
+.chip{display:flex;align-items:center;gap:7px;font-weight:800;font-size:13.5px;color:var(--soil-deep);
+  background:var(--cream);border-radius:999px;padding:8px 15px;box-shadow:0 4px 0 var(--sand-deep);}
+.chip svg{width:14px;height:14px;color:var(--leaf);}
+
+/* moldura do vídeo (VSL) */
+.stage{perspective:1100px;max-width:660px;margin:0 auto 42px;}
+.frame{position:relative;padding:12px;border-radius:26px;
+  background:linear-gradient(145deg,#FFF3D6,var(--sand) 55%,#D9C69C);
+  box-shadow:0 0 0 3px var(--olive),0 2px 0 #fff inset,0 14px 0 var(--leaf-deep),0 28px 44px rgba(0,0,0,.35);
+  transform:rotateX(6deg) rotateY(-6deg);transform-style:preserve-3d;
+  animation:settle 1.4s cubic-bezier(.2,.8,.2,1) both;}
+.frame-inner{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:16/9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:16px;
+  color:var(--soil-deep);text-align:center;
+  background:radial-gradient(ellipse at 30% 20%,#fff,transparent 60%),linear-gradient(160deg,#F7EFD6,#E8D8B8);
+  box-shadow:inset 0 0 0 2px rgba(79,119,45,.35);}
+.frame-inner .play{width:64px;height:64px;border-radius:50%;background:var(--terra);display:flex;align-items:center;justify-content:center;box-shadow:0 5px 0 var(--terra-deep),0 10px 18px rgba(0,0,0,.25);}
+.frame-inner .play svg{width:26px;height:26px;color:#fff;margin-left:4px;}
+.frame-inner p{font-weight:800;font-size:14px;max-width:340px;line-height:1.35;}
+.frame-inner .leafdec{position:absolute;width:74px;color:var(--olive);opacity:.55;}
+.frame-inner .ld1{left:-8px;top:-6px;transform:rotate(-10deg);}
+.frame-inner .ld2{right:-8px;bottom:-8px;transform:rotate(170deg);}
+.frame-tag{position:absolute;top:-18px;right:-10px;background:var(--rose);color:var(--soil-deep);
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:700;font-size:21px;padding:3px 16px;border-radius:10px;transform:rotate(6deg) translateZ(40px);
+  box-shadow:0 4px 0 var(--rose-deep);}
+@keyframes settle{from{transform:rotateX(22deg) rotateY(-22deg) translateY(30px);opacity:0;}to{transform:rotateX(6deg) rotateY(-6deg);opacity:1;}}
+
+.stat-row{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;max-width:640px;margin:38px auto 0;}
+@media (min-width:560px){.stat-row{grid-template-columns:repeat(4,1fr);}}
+.stat{background:var(--cream);color:var(--soil-deep);border-radius:16px;padding:16px 10px;text-align:center;box-shadow:0 6px 0 var(--sand-deep),0 12px 20px rgba(0,0,0,.18);}
+.stat b{display:block;font-family:'Playfair Display',serif;font-weight:800;font-size:19px;color:var(--leaf);line-height:1.15;}
+.stat span{font-size:12px;font-weight:700;color:var(--muted);}
+
+/* ===== dor: caderno do jardim ===== */
+.notebook{position:relative;background:
+   repeating-linear-gradient(180deg,transparent 0 31px,rgba(144,169,85,.22) 31px 32px),
+   #FFFDF3;
+  color:var(--soil-deep);border-radius:10px 18px 18px 10px;padding:34px 22px 26px 34px;
+  border-left:14px solid var(--rose);
+  box-shadow:0 10px 0 var(--sand-deep),0 22px 36px rgba(67,48,31,.25);}
+.notebook::before{content:"";position:absolute;top:-14px;left:50%;width:110px;height:28px;transform:translateX(-50%) rotate(-3deg);
+  background:rgba(232,174,183,.75);box-shadow:0 2px 4px rgba(0,0,0,.12);}
+.notebook h3{font-size:clamp(21px,5.2vw,27px);text-align:center;color:var(--leaf-deep);margin-bottom:16px;}
+.pain-list{list-style:none;display:flex;flex-direction:column;gap:12px;}
+.pain-list li{display:flex;gap:12px;align-items:flex-start;font-size:16px;font-weight:700;line-height:1.45;color:var(--soil-deep);
+  background:#fff;border-radius:12px;padding:12px 14px;box-shadow:0 4px 0 #EADFC4;}
+.pain-list li .x{flex-shrink:0;font-size:18px;line-height:1.3;}
+.turn{margin:34px auto 26px;font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(20px,4.8vw,26px);line-height:1.35;text-align:center;max-width:560px;}
+
+/* ===== produto: ebook + caminho ===== */
+.ebook-wrap{max-width:320px;margin:0 auto 46px;animation:productFloat 6s ease-in-out infinite;}
+.ebook{position:relative;container-type:inline-size;aspect-ratio:3/4.1;border-radius:6px 14px 14px 6px;color:var(--cream);
+  background:radial-gradient(circle at 30% 15%,rgba(255,255,255,.18),transparent 55%),linear-gradient(160deg,#5E8A34,var(--leaf) 55%,var(--leaf-deep));
+  box-shadow:inset 9px 0 0 rgba(0,0,0,.2),inset 11px 0 0 rgba(255,255,255,.08),0 26px 30px rgba(53,82,29,.4);
+  padding:9% 8% 8% 13%;display:flex;flex-direction:column;align-items:center;justify-content:space-between;text-align:center;overflow:hidden;}
+.ebook .eb-top{font-size:11px;font-size:3.6cqw;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--rose);}
+.ebook .eb-art{width:64%;color:var(--olive);}
+.ebook .eb-title{font-family:'Playfair Display',serif;font-weight:900;font-size:24px;font-size:9.6cqw;line-height:1.05;}
+.ebook .eb-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:700;font-size:16px;font-size:6cqw;color:#F2E3B8;border-top:1px solid rgba(255,248,231,.5);padding-top:8px;margin-top:8px;}
+.ph-label{display:block;margin-top:18px;font-size:13px;font-weight:800;color:var(--muted);text-align:center;}
+.s-leaf .ph-label{color:#E4D9B8;}
+
+/* ===== linha do tempo ===== */
+.timeline{list-style:none;display:grid;gap:18px;counter-reset:step;margin-top:10px;}
+@media (min-width:760px){.timeline{grid-template-columns:repeat(5,1fr);gap:14px;}}
+.tl{counter-increment:step;background:var(--cream);border-radius:18px;padding:20px 18px 18px;position:relative;
+  box-shadow:0 8px 0 var(--sand-deep),0 16px 26px rgba(67,48,31,.14);}
+.tl::before{content:counter(step);position:absolute;top:-14px;left:18px;width:36px;height:36px;border-radius:50%;
+  background:var(--olive);color:var(--leaf-deep);font-family:'Playfair Display',serif;font-weight:900;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 0 var(--leaf);}
+.tl h4{font-size:17px;margin:8px 0 6px;}
+.tl p{font-size:14px;color:var(--text-soft);line-height:1.5;}
+
+/* ===== carrossel coverflow 3D ===== */
+.cf{display:flex;align-items:center;justify-content:center;gap:6px;padding:14px 0 4px;}
+.cf-track{position:relative;height:360px;width:100%;max-width:560px;perspective:1000px;transform-style:preserve-3d;}
+.cf-track.tall{height:300px;}
+.cf-track.wide{height:350px;}
+.cf-slide{position:absolute;top:0;left:50%;width:220px;opacity:0;pointer-events:none;
+  transform:translateX(-50%) translateZ(-300px);transition:transform .5s cubic-bezier(.2,.8,.2,1),opacity .4s ease;}
+.cf-track.tall .cf-slide{width:210px;}
+.cf-track.wide .cf-slide{width:270px;}
+.cf-slide.pos-center{opacity:1;transform:translateX(-50%) translateZ(0);z-index:3;pointer-events:auto;}
+.cf-slide.pos-left{opacity:.7;transform:translateX(-112%) translateZ(-160px) rotateY(38deg);z-index:1;pointer-events:auto;cursor:pointer;}
+.cf-slide.pos-right{opacity:.7;transform:translateX(12%) translateZ(-160px) rotateY(-38deg);z-index:1;pointer-events:auto;cursor:pointer;}
+.cf-nav{width:44px;height:44px;border-radius:50%;background:var(--cream);color:var(--leaf-deep);border:0;font-size:22px;font-weight:800;
+  cursor:pointer;flex-shrink:0;z-index:5;box-shadow:0 5px 0 var(--sand-deep),0 8px 14px rgba(0,0,0,.2);}
+.cf-nav:active{transform:translateY(3px);box-shadow:0 2px 0 var(--sand-deep);}
+.cf-dots{display:flex;justify-content:center;flex-wrap:wrap;gap:7px;margin-top:6px;}
+.dot{width:8px;height:8px;border-radius:50%;background:rgba(79,119,45,.28);cursor:pointer;}
+.dot.active{background:var(--terra);}
+.s-leaf .dot,.s-soil .dot{background:rgba(255,248,231,.35);}
+.s-leaf .dot.active,.s-soil .dot.active{background:var(--rose);}
+.s-rose .dot{background:rgba(67,48,31,.25);}
+.s-rose .dot.active{background:var(--leaf);}
+.cf-caption{text-align:center;font-weight:800;font-size:15px;margin-top:4px;min-height:24px;}
+.sub-gallery{font-family:'Playfair Display',serif;font-weight:800;font-size:22px;text-align:center;margin:30px 0 4px;}
+.print-note{max-width:520px;margin:18px auto 0;text-align:center;font-size:14px;color:var(--muted);font-weight:700;}
+@media (max-width:480px){
+  .cf-track{height:300px;} .cf-track.tall{height:285px;} .cf-track.wide{height:340px;}
+  .cf-slide{width:180px;} .cf-track.tall .cf-slide{width:175px;} .cf-track.wide .cf-slide{width:230px;}
+  .cf-nav{width:38px;height:38px;font-size:19px;}
+}
+
+/* placeholders de imagem */
+.ph{aspect-ratio:4/5;border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;padding:14px;
+  background:radial-gradient(ellipse at 30% 15%,#fff,transparent 60%),linear-gradient(160deg,#FFF8E7,#EFE2C2);
+  border:2px dashed var(--olive);box-shadow:0 18px 30px rgba(53,82,29,.3),0 0 0 1px rgba(0,0,0,.05);}
+.ph .em{font-size:38px;line-height:1;}
+.ph b{font-family:'Playfair Display',serif;font-size:17px;color:var(--leaf-deep);line-height:1.2;}
+.ph small{font-size:12px;font-weight:800;color:var(--muted);}
+.ph.bonus-ph b{color:var(--terra-deep);}
+
+/* cards de depoimento */
+.tcard{background:var(--cream);border-radius:20px;padding:14px;color:var(--soil-deep);box-shadow:0 8px 0 var(--rose-deep),0 18px 28px rgba(67,48,31,.3);}
+.tcard .ph-box{border:2px dashed var(--olive);border-radius:12px;background:#FFFBEF;display:flex;align-items:center;justify-content:center;text-align:center;font-size:12px;font-weight:800;color:var(--muted);padding:8px;}
+.tcard .photo{width:60px;height:60px;border-radius:50%;flex-shrink:0;font-size:11px;line-height:1.15;}
+.tcard .ba{height:120px;margin:10px 0;}
+.tcard .who{display:flex;align-items:center;gap:10px;}
+.tcard .who b{font-family:'Playfair Display',serif;font-size:15px;display:block;}
+.tcard .stars{color:var(--terra);font-size:13px;letter-spacing:2px;}
+.tcard blockquote{font-size:14.5px;font-weight:600;line-height:1.5;color:var(--text-soft);font-style:italic;}
+
+/* ===== perfis ===== */
+.grade-grid{display:grid;gap:14px;}
+@media (min-width:640px){.grade-grid{grid-template-columns:repeat(3,1fr);}}
+.grade-box{background:var(--sand);border-radius:16px;padding:18px;box-shadow:0 6px 0 var(--sand-deep);}
+.grade-box .hand{font-size:24px;color:var(--leaf-deep);display:block;margin-bottom:10px;line-height:1.1;}
+.pills{display:flex;flex-wrap:wrap;gap:8px;}
+.pill{font-size:13px;font-weight:800;padding:6px 12px;border-radius:999px;background:var(--cream);box-shadow:0 3px 0 var(--sand-deep);}
+
+/* ===== selos ===== */
+.seals{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
+@media (min-width:640px){.seals{grid-template-columns:repeat(4,1fr);}}
+.seal{text-align:center;padding:20px 10px;border-radius:16px;background:rgba(255,248,231,.1);box-shadow:inset 0 1px 0 rgba(255,255,255,.15),0 6px 0 rgba(0,0,0,.2);}
+.seal svg{width:28px;height:28px;margin:0 auto 10px;color:var(--rose);}
+.seal h4{font-family:'Nunito',sans-serif;font-weight:800;font-size:14px;color:var(--cream);}
+
+/* ===== bônus ===== */
+.bonus-total{text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:700;font-size:27px;color:var(--rose);}
+.bonus-sub{text-align:center;font-size:14px;color:#E4D9B8;margin-bottom:30px;}
+.bonus-grid{display:grid;gap:22px;}
+@media (min-width:560px){.bonus-grid{grid-template-columns:1fr 1fr;}}
+@media (min-width:900px){.bonus-grid{grid-template-columns:repeat(3,1fr);}}
+.bonus-card{background:var(--cream);color:var(--soil-deep);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;
+  box-shadow:0 8px 0 var(--leaf-deep),0 18px 28px rgba(0,0,0,.3);}
+.bonus-img{padding:12px 12px 0;}
+.bonus-img .ph{aspect-ratio:16/10;box-shadow:none;}
+.bonus-tag{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:700;font-size:18px;color:var(--terra-deep);padding:12px 16px 0;}
+.bonus-card h4{font-size:17px;padding:2px 16px 0;}
+.bonus-card p{font-size:13.5px;color:var(--text-soft);padding:6px 16px 0;line-height:1.5;}
+.bonus-card ul{list-style:none;padding:6px 16px 0;font-size:13.5px;font-weight:700;color:var(--text-soft);display:grid;gap:2px;}
+.bonus-foot{display:flex;justify-content:space-between;align-items:center;padding:12px 16px 16px;margin-top:auto;}
+.bonus-foot s{font-size:13px;color:var(--muted);}
+.free{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:700;font-size:22px;color:var(--leaf);}
+
+/* ===== OFERTA ===== */
+.offer{background:
+   radial-gradient(ellipse at 50% 0%,rgba(232,174,183,.3),transparent 60%),
+   var(--leaf-deep);color:var(--cream);}
+.menu-board{max-width:860px;margin:0 auto;perspective:1400px;}
+.menu-head{text-align:center;margin-bottom:10px;}
+.menu-head h2{font-family:'Playfair Display',serif;font-size:clamp(28px,7vw,46px);color:var(--cream);
+  text-shadow:0 1px 0 #1f3313,0 2px 0 #1a2c10,0 12px 20px rgba(0,0,0,.4);}
+.menu-head .note{color:var(--rose);}
+.promo{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:14px;color:var(--cream);
+  background:rgba(255,248,231,.12);border-radius:999px;padding:8px 18px;margin-top:10px;}
+.promo .timer{font-variant-numeric:tabular-nums;font-weight:800;color:var(--rose);}
+.plans{display:grid;gap:30px;margin:40px auto 22px;transform-style:preserve-3d;}
+@media (min-width:780px){.plans{grid-template-columns:1fr 1.08fr;align-items:center;}}
+.plan{background:var(--cream);color:var(--soil-deep);border-radius:22px;padding:30px 24px 26px;display:flex;flex-direction:column;position:relative;
+  box-shadow:0 10px 0 var(--sand-deep),0 24px 40px rgba(0,0,0,.35);}
+.plan.basic{transform:rotateY(6deg) rotateX(3deg);}
+.plan.featured{background:linear-gradient(180deg,#FFFDF5,var(--cream));
+  box-shadow:0 0 0 4px var(--rose),0 12px 0 var(--rose-deep),0 34px 60px rgba(0,0,0,.5);
+  transform:rotateY(-6deg) rotateX(3deg) translateZ(30px);}
+@media (max-width:779px){.plan.basic,.plan.featured{transform:none;}}
+.plan-flag{position:absolute;top:-17px;left:50%;transform:translateX(-50%);white-space:nowrap;
+  background:var(--terra);color:#fff;font-weight:800;font-size:13px;padding:7px 16px;border-radius:999px;box-shadow:0 4px 0 var(--terra-deep);}
+.plan-name{font-family:'Playfair Display',serif;font-weight:800;font-size:21px;color:var(--leaf-deep);text-align:center;line-height:1.2;margin-top:4px;}
+.plan-price{text-align:center;margin:8px 0 2px;}
+.plan-price s{display:block;font-size:14px;color:var(--muted);}
+.plan-price .new{font-family:'Playfair Display',serif;font-weight:900;font-size:52px;line-height:1;color:var(--terra-deep);}
+.plan-price .new small{font-size:24px;}
+.plan-cap{text-align:center;font-size:13px;font-weight:700;color:var(--muted);margin-bottom:18px;}
+.menu-list{list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:18px;}
+.menu-list li{display:flex;align-items:baseline;gap:8px;font-size:14.5px;font-weight:700;color:var(--soil-deep);}
+.menu-list li .dots{flex:1;border-bottom:2px dotted var(--sand-deep);transform:translateY(-4px);min-width:14px;}
+.menu-list li .tag{font-size:11px;font-weight:800;padding:2px 8px;border-radius:999px;background:var(--leaf);color:#fff;flex-shrink:0;}
+.menu-list li .ok{color:var(--leaf);font-weight:900;flex-shrink:0;}
+.menu-list.bonus li{font-size:13.5px;font-weight:600;}
+.menu-sep{text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:700;font-size:22px;color:var(--terra-deep);margin:4px 0 10px;}
+.plan .btn{width:100%;min-width:0;margin-top:auto;}
+.plan-note{text-align:center;font-size:13px;color:var(--muted);margin-top:14px;font-weight:700;}
+@keyframes pulse{0%,100%{box-shadow:0 7px 0 var(--terra-deep),0 14px 24px rgba(53,82,29,.35),0 0 0 0 rgba(201,124,93,.55);}
+  60%{box-shadow:0 7px 0 var(--terra-deep),0 14px 24px rgba(53,82,29,.35),0 0 0 14px rgba(201,124,93,0);}}
+#btn-completo{animation:pulse 1.9s infinite;}
+
+/* ===== passos de acesso ===== */
+.steps{display:grid;gap:18px;}
+@media (min-width:640px){.steps{grid-template-columns:repeat(3,1fr);}}
+.step{text-align:center;padding:24px 16px 20px;background:var(--cream);border-radius:18px;box-shadow:0 7px 0 var(--sand-deep);}
+.step-n{width:38px;height:38px;border-radius:50%;background:var(--rose);color:var(--soil-deep);font-family:'Playfair Display',serif;font-weight:900;
+  display:flex;align-items:center;justify-content:center;margin:0 auto 12px;box-shadow:0 4px 0 var(--rose-deep);}
+.step p{font-size:15px;font-weight:700;color:var(--soil-deep);}
+
+/* ===== garantia ===== */
+.guarantee{display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;padding:32px 24px;border-radius:22px;
+  background:rgba(255,248,231,.08);box-shadow:inset 0 0 0 2px rgba(232,174,183,.75),inset 0 0 0 7px rgba(255,248,231,.06),0 8px 0 rgba(0,0,0,.22);}
+.g-medal{position:relative;width:96px;height:96px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#B7CC7E,var(--olive) 55%,var(--leaf));
+  display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:900;font-size:15px;line-height:1.05;color:var(--leaf-deep);
+  box-shadow:0 0 0 5px var(--cream),0 0 0 7px var(--olive),0 12px 20px rgba(0,0,0,.35),inset 0 2px 0 rgba(255,255,255,.4);}
+.g-medal svg{width:26px;height:26px;margin-bottom:2px;}
+.g-cert{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:700;font-size:19px;color:var(--rose);}
+.guarantee h3{font-size:clamp(21px,5vw,26px);color:var(--cream);}
+.guarantee p{font-size:15px;color:#F1E8D0;max-width:480px;}
+
+/* ===== FAQ ===== */
+.faq details{background:var(--cream);border-radius:16px;margin-bottom:14px;box-shadow:0 6px 0 var(--sand-deep);}
+.faq summary{display:flex;justify-content:space-between;align-items:center;gap:12px;cursor:pointer;list-style:none;
+  padding:18px 20px;font-weight:800;font-size:15.5px;}
+.faq summary::-webkit-details-marker{display:none;}
+.faq .plus{width:22px;height:22px;position:relative;flex-shrink:0;}
+.faq .plus::before,.faq .plus::after{content:"";position:absolute;background:var(--terra);top:50%;left:50%;transform:translate(-50%,-50%);border-radius:2px;}
+.faq .plus::before{width:14px;height:3px;}
+.faq .plus::after{width:3px;height:14px;transition:transform .2s ease;}
+.faq details[open] .plus::after{transform:translate(-50%,-50%) rotate(90deg) scaleY(0);}
+.faq .answer{padding:0 20px 18px;font-size:14.5px;color:var(--text-soft);}
+
+/* ===== final ===== */
+.final h2{font-size:clamp(25px,6vw,37px);margin-bottom:14px;}
+.trust-row{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 18px;margin-top:24px;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:700;font-size:21px;color:#E4D9B8;}
+footer{background:var(--leaf-deep);color:#CFD9B4;text-align:center;padding:26px 20px calc(26px + env(safe-area-inset-bottom,0px));font-size:14px;}
+
+/* ===== prova social popup ===== */
+.social-proof{position:fixed;right:14px;top:64px;z-index:60;background:var(--cream);border-radius:16px;padding:13px 15px;display:flex;gap:11px;align-items:flex-start;max-width:290px;
+  transform:translateY(-160%);opacity:0;transition:transform .35s ease,opacity .35s ease;cursor:pointer;box-shadow:0 6px 0 var(--sand-deep),0 14px 24px rgba(0,0,0,.25);}
+.social-proof.show{transform:translateY(0);opacity:1;}
+.sp-avatar{width:34px;height:34px;border-radius:50%;background:var(--terra);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.sp-text{font-size:12.5px;line-height:1.4;font-weight:700;}
+.sp-meta{display:flex;align-items:center;gap:5px;font-size:11.5px;color:var(--muted);margin-top:3px;}
+.sp-dot{width:6px;height:6px;border-radius:50%;background:var(--leaf);}
+.sp-close{position:absolute;top:6px;right:8px;background:none;border:none;font-size:12px;color:var(--muted);cursor:pointer;}
+
+/* ===== upsell ===== */
+.upsell-overlay{position:fixed;inset:0;z-index:90;background:rgba(43,58,25,.78);display:flex;align-items:center;justify-content:center;padding:20px;
+  opacity:0;pointer-events:none;transition:opacity .2s ease;perspective:1000px;}
+.upsell-overlay.open{opacity:1;pointer-events:auto;}
+.upsell-modal{background:var(--cream);max-width:420px;width:100%;padding:28px 24px;position:relative;border-radius:22px;
+  box-shadow:0 10px 0 var(--rose-deep),0 30px 50px rgba(0,0,0,.45);transform:rotateX(18deg) translateY(30px);transition:transform .35s cubic-bezier(.2,.8,.2,1);}
+.upsell-overlay.open .upsell-modal{transform:none;}
+.upsell-close{position:absolute;top:12px;right:14px;background:none;border:none;font-size:16px;color:var(--muted);cursor:pointer;}
+.upsell-kicker{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:700;font-size:22px;color:var(--terra-deep);}
+.upsell-modal h3{font-size:25px;margin:4px 0 10px;}
+.upsell-desc{font-size:15px;color:var(--text-soft);margin-bottom:16px;}
+.upsell-list{list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:18px;}
+.upsell-list li{display:flex;gap:9px;font-size:14px;font-weight:700;}
+.upsell-list li::before{content:"✓";color:var(--leaf);font-weight:900;}
+.upsell-price{text-align:center;margin-bottom:18px;}
+.upsell-price .amount{font-family:'Playfair Display',serif;font-weight:900;font-size:34px;color:var(--terra-deep);}
+.upsell-actions{display:flex;flex-direction:column;gap:12px;}
+.upsell-actions .btn{min-width:0;}
+.upsell-decline{text-align:center;font-size:14px;color:var(--muted);text-decoration:underline;}
+
+@media (prefers-reduced-motion: reduce){
+  #btn-completo,.frame,.ebook-wrap{animation:none;}
+  .cf-slide,.upsell-modal{transition:none;}
+  html{scroll-behavior:auto;}
+}
+
+/* ================= ANIMAÇÕES BOTÂNICAS ================= */
+
+/* hero: palavras do título sobem uma a uma */
+.hero h1 .w{display:inline-block;opacity:0;transform:translateY(24px) rotateX(-60deg);transform-origin:50% 100%;
+  animation:wordUp .7s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:calc(.05s * var(--i));}
+@keyframes wordUp{to{opacity:1;transform:none;}}
+
+/* cena do mockup */
+.mock-scene{position:relative;max-width:560px;aspect-ratio:1/1.02;height:auto;margin:6px auto 62px;perspective:1200px;touch-action:pan-y;}
+.mock-glow{position:absolute;left:8%;right:8%;top:10%;bottom:6%;border-radius:50%;
+  background:radial-gradient(circle,rgba(232,174,183,.5),rgba(232,174,183,0) 65%);filter:blur(10px);animation:glow 5s ease-in-out infinite;}
+@keyframes glow{0%,100%{opacity:.7;transform:scale(1);}50%{opacity:1;transform:scale(1.06);}}
+.mock-stack{position:absolute;left:0;right:0;top:0;transform-style:preserve-3d;
+  transform:rotateX(calc(4deg + var(--rx,0deg))) rotateY(var(--ry,0deg));transition:transform .25s ease-out;}
+.mock-product{position:relative;width:62%;margin:0 auto;transform-origin:50% 80%;opacity:0;
+  animation:productIn 1.2s .2s cubic-bezier(.2,.8,.2,1) forwards,productFloat 6s 1.6s ease-in-out infinite;}
+.mock-product .ebook{filter:drop-shadow(0 20px 22px rgba(0,0,0,.35));}
+@keyframes productIn{from{opacity:0;transform:translateY(60px) rotateX(35deg) scale(.82);}to{opacity:1;transform:none;}}
+@keyframes productFloat{0%,100%{opacity:1;transform:translateY(0);}50%{opacity:1;transform:translateY(-10px);}}
+.mock-shine{position:absolute;inset:0;pointer-events:none;border-radius:6px 14px 14px 6px;
+  background:linear-gradient(110deg,transparent 35%,rgba(255,255,255,.35) 50%,transparent 65%) -200% 0/300% 100% no-repeat;
+  animation:sheen 5s 2.2s ease-in-out infinite;}
+@keyframes sheen{0%{background-position:-200% 0;}40%,100%{background-position:200% 0;}}
+.mock-tag{position:absolute;top:2px;right:0;z-index:6;background:var(--rose);color:var(--soil-deep);
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:700;font-size:21px;padding:3px 14px;border-radius:10px;
+  box-shadow:0 4px 0 var(--rose-deep);transform:rotate(6deg);animation:tagPop .6s 1.3s cubic-bezier(.3,1.6,.5,1) both;}
+@keyframes tagPop{from{transform:rotate(6deg) scale(0);}to{transform:rotate(6deg) scale(1);}}
+
+/* vasinho sendo regado */
+.plant-svg{position:absolute;right:-10px;bottom:-24px;width:160px;z-index:5;cursor:pointer;overflow:visible;
+  filter:drop-shadow(0 14px 14px rgba(0,0,0,.3));animation:cupIn .8s .5s cubic-bezier(.2,.8,.2,1) both;}
+@keyframes cupIn{from{opacity:0;transform:translateY(40px) scale(.8);}to{opacity:1;transform:none;}}
+.plant-svg .jug{transform:translate(-90px,-60px);opacity:0;}
+.plant-svg .jug-tilt{transform-origin:20px 40px;}
+.plant-svg .stream{stroke-dasharray:1;stroke-dashoffset:1;}
+.plant-svg .grow{transform-box:fill-box;transform-origin:50% 100%;transform:scale(.25);}
+.plant-svg .bloom{transform-box:fill-box;transform-origin:center;transform:scale(0);}
+.plant-svg .splash{transform-box:fill-box;transform-origin:center;opacity:0;}
+.plant-svg.play .jug{animation:jugMove 3.8s .9s ease-in-out both;}
+.plant-svg.play .jug-tilt{animation:jugTilt 3.8s .9s ease-in-out both;}
+.plant-svg.play .stream{animation:pour 3.8s .9s linear both;}
+.plant-svg.play .grow{animation:grow 3.8s .9s cubic-bezier(.3,1.4,.5,1) both;}
+.plant-svg.play .bloom{animation:bloom 3.8s .9s cubic-bezier(.3,1.7,.5,1) both;}
+.plant-svg.play .splash{animation:splash 1.6s 2.3s ease-out both;}
+@keyframes jugMove{0%{transform:translate(-90px,-60px);opacity:0;}14%{transform:translate(6px,8px);opacity:1;}80%{transform:translate(6px,8px);opacity:1;}100%{transform:translate(-90px,-60px);opacity:0;}}
+@keyframes jugTilt{0%,16%{transform:rotate(0);}30%,68%{transform:rotate(40deg);}82%,100%{transform:rotate(0);}}
+@keyframes pour{0%,30%{stroke-dashoffset:1;}40%,66%{stroke-dashoffset:0;}78%,100%{stroke-dashoffset:-1;}}
+@keyframes grow{0%,40%{transform:scale(.25);}88%{transform:scale(1.06);}100%{transform:scale(1);}}
+@keyframes bloom{0%,72%{transform:scale(0);}92%{transform:scale(1.15);}100%{transform:scale(1);}}
+@keyframes splash{0%{opacity:.9;transform:scale(.3);}100%{opacity:0;transform:scale(1.6);}}
+.plant-hint{position:absolute;right:16px;bottom:-50px;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:700;font-size:18px;color:#F1E8D0;z-index:5;
+  animation:tagPop .5s 4.8s both;}
+
+/* decorações: suculenta e flor */
+.deco{position:absolute;z-index:5;filter:drop-shadow(0 10px 10px rgba(0,0,0,.3));}
+.deco.c1{left:-6px;bottom:-4px;width:76px;animation:cookieIn .8s .7s cubic-bezier(.2,.8,.2,1) both,bob 4.2s 1.5s ease-in-out infinite;}
+.deco.c2{left:54px;bottom:-16px;width:58px;animation:cookieIn .8s .85s cubic-bezier(.2,.8,.2,1) both,bob2 5s 1.6s ease-in-out infinite;}
+@keyframes cookieIn{from{opacity:0;transform:translateY(40px) rotate(-60deg);}to{opacity:1;transform:none;}}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(0);}50%{transform:translateY(-12px) rotate(6deg);}}
+@keyframes bob2{0%,100%{transform:translateY(0) rotate(-8deg);}50%{transform:translateY(-8px) rotate(6deg);}}
+
+/* folhinhas flutuando no fundo do hero */
+.drifters{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:0;}
+.drifter{position:absolute;width:18px;height:18px;border-radius:0 100% 0 100%;
+  background:linear-gradient(135deg,var(--olive),#6F8F3E);opacity:.5;
+  animation:leafDrift linear infinite;}
+.drifter.pink{background:linear-gradient(135deg,var(--rose),#D98F9C);border-radius:50% 0 50% 50%;}
+@keyframes leafDrift{0%{transform:translateY(40px) rotate(0);opacity:0;}15%{opacity:.55;}85%{opacity:.55;}100%{transform:translateY(-460px) rotate(340deg);opacity:0;}}
+.hero .wrap-narrow{position:relative;z-index:1;}
+
+/* gota que enche conforme a rolagem */
+.scroll-drop{position:fixed;left:12px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:40;width:58px;height:58px;border:0;
+  background:var(--cream);border-radius:50%;box-shadow:0 5px 0 var(--sand-deep),0 10px 18px rgba(0,0,0,.25);cursor:pointer;
+  display:flex;align-items:center;justify-content:center;opacity:0;transform:scale(.6);transition:opacity .3s,transform .3s;}
+.scroll-drop.on{opacity:1;transform:scale(1);}
+.scroll-drop svg{width:38px;height:38px;overflow:visible;}
+.scroll-drop.full{animation:dropFull 1.6s ease-in-out infinite;}
+@keyframes dropFull{0%,100%{transform:scale(1);}50%{transform:scale(1.12);}}
+
+/* gota caindo no vaso (oferta) */
+.dunk{width:130px;margin:0 auto -6px;display:block;overflow:visible;}
+.dunk .biscuit{animation:dunk 4.2s ease-in infinite;}
+.dunk .wet{transform-box:fill-box;transform-origin:50% 100%;animation:wet 4.2s ease-in-out infinite;}
+.dunk .ripple{transform-box:fill-box;transform-origin:center;animation:ripple 4.2s ease-out infinite;opacity:0;}
+@keyframes dunk{0%,8%{transform:translateY(-30px);opacity:0;}16%{opacity:1;}42%{transform:translateY(58px);opacity:1;}46%,100%{transform:translateY(62px);opacity:0;}}
+@keyframes wet{0%,44%{transform:scale(.3);opacity:.4;}70%,90%{transform:scale(1);opacity:1;}100%{transform:scale(.3);opacity:.4;}}
+@keyframes ripple{0%,42%{opacity:0;transform:scale(.4);}46%{opacity:.9;}70%{opacity:0;transform:scale(1.6);}100%{opacity:0;}}
+
+/* brilho que passa pelo botão principal */
+.btn-terra{overflow:hidden;}
+.btn-terra::after{content:"";position:absolute;top:0;bottom:0;width:60px;left:-80px;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg);
+  animation:shine 3.4s 2s ease-in-out infinite;}
+@keyframes shine{0%{left:-80px;}35%,100%{left:calc(100% + 40px);}}
+
+/* pétalas ao clicar nos botões */
+.petal-drop{position:fixed;width:10px;height:10px;border-radius:50% 0 50% 50%;pointer-events:none;z-index:99;
+  animation:drop .8s cubic-bezier(.2,.7,.3,1) forwards;}
+@keyframes drop{to{transform:translate(var(--dx),var(--dy)) rotate(200deg) scale(.2);opacity:0;}}
+
+/* revelação ao rolar */
+.js-rv .rv{opacity:0;translate:0 34px;transition:opacity .7s ease,translate .7s cubic-bezier(.2,.8,.2,1);}
+.js-rv .rv.in{opacity:1;translate:0 0;}
+.js-rv .tl.rv{translate:0 -40px;}
+.js-rv .tl.rv.in{translate:0 0;}
+
+@media (max-width:480px){
+  .chips{gap:8px;margin-bottom:26px;} .chip{font-size:12.5px;padding:7px 12px;}
+  .plant-svg{width:124px;right:-12px;bottom:-26px;}
+  .deco.c1{width:60px;} .deco.c2{width:46px;left:42px;}
+  .frame{transform:rotateX(4deg) rotateY(-3deg);}
+}
+
+/* ================= ANIMAÇÕES — ROUND 2 ================= */
+section{position:relative;}
+/* ondas entre seções */
+.wave{position:absolute;left:0;right:0;top:-1px;height:38px;overflow:hidden;pointer-events:none;z-index:1;}
+.wave svg{position:absolute;top:0;left:0;width:200%;max-width:none;height:100%;}
+.wave .w1{animation:waveMove 9s linear infinite;}
+.wave .w2{animation:waveMove 14s linear infinite reverse;opacity:.45;}
+@keyframes waveMove{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+.section > .wrap,.section > .wrap-narrow,.section > .menu-board{z-index:2;}
+
+/* folhas decorativas nas seções claras */
+.stain{position:absolute;pointer-events:none;z-index:0;opacity:.16;}
+
+/* chips do hero entram quicando */
+.chip{opacity:0;animation:chipIn .6s cubic-bezier(.3,1.6,.5,1) forwards;}
+.chip:nth-child(1){animation-delay:.9s;} .chip:nth-child(2){animation-delay:1.02s;} .chip:nth-child(3){animation-delay:1.14s;}
+@keyframes chipIn{from{opacity:0;transform:translateY(16px) scale(.7);}to{opacity:1;transform:none;}}
+
+/* caderno: cartões aparecem como escritos */
+.note-under{display:block;width:70%;max-width:280px;height:14px;margin:-8px auto 14px;overflow:visible;}
+.note-under path{stroke-dasharray:300;stroke-dashoffset:300;}
+.js-rv .notebook .pain-list li{clip-path:inset(0 100% 0 0);}
+.js-rv .notebook.in .pain-list li{animation:chalkWrite .9s steps(18) forwards;}
+.js-rv .notebook.in .pain-list li:nth-child(1){animation-delay:.5s;}
+.js-rv .notebook.in .pain-list li:nth-child(2){animation-delay:1.25s;}
+.js-rv .notebook.in .pain-list li:nth-child(3){animation-delay:2s;}
+.js-rv .notebook.in .pain-list li:nth-child(4){animation-delay:2.75s;}
+.js-rv .notebook.in .pain-list li:nth-child(5){animation-delay:3.5s;}
+.notebook.in .note-under path{animation:draw .8s .2s ease-out forwards;}
+@keyframes chalkWrite{to{clip-path:inset(0 0 0 0);}}
+@keyframes draw{to{stroke-dashoffset:0;}}
+
+/* seiva subindo pela linha do tempo */
+.timeline{position:relative;}
+.drip-track{position:absolute;pointer-events:none;border-radius:4px;background:rgba(79,119,45,.15);}
+.drip-fill{position:absolute;inset:0;border-radius:4px;background:linear-gradient(180deg,var(--olive),var(--leaf));}
+.drip-drop{position:absolute;width:12px;height:16px;border-radius:0 100% 0 100%;background:var(--leaf);
+  animation:dropFall 1.4s ease-in infinite;}
+@keyframes dropFall{0%{transform:translateY(0) scale(.6);opacity:0;}20%{opacity:1;transform:translateY(0) scale(1);}100%{transform:translateY(40px) scale(.8);opacity:0;}}
+@media (max-width:759px){
+  .timeline{padding-left:30px;}
+  .drip-track{left:8px;top:6px;bottom:6px;width:6px;}
+  .drip-fill{transform-origin:top;transform:scaleY(var(--p,0));}
+  .drip-drop{left:-3px;top:calc(var(--p,0) * 100%);}
+}
+@media (min-width:760px){
+  .timeline{padding-top:34px;}
+  .drip-track{left:4px;right:4px;top:4px;height:6px;}
+  .drip-fill{transform-origin:left;transform:scaleX(var(--p,0));}
+  .drip-drop{top:-2px;left:calc(var(--p,0) * 100% - 6px);}
+}
+.tl.lit::before{animation:pop .5s cubic-bezier(.3,1.7,.5,1);background:var(--terra);color:#fff;box-shadow:0 4px 0 var(--terra-deep);}
+@keyframes pop{0%{transform:scale(1);}50%{transform:scale(1.35);}100%{transform:scale(1);}}
+
+/* cards com tilt 3D e reflexo */
+.tilt{transform-style:preserve-3d;transition:transform .2s ease-out;will-change:transform;}
+.tilt .glare{position:absolute;inset:0;pointer-events:none;border-radius:inherit;opacity:0;transition:opacity .3s;
+  background:radial-gradient(circle at var(--gx,50%) var(--gy,50%),rgba(255,255,255,.45),transparent 55%);z-index:4;}
+.tilt:hover .glare{opacity:1;}
+.bonus-card{position:relative;}
+
+/* preço: risco desenhado e contagem */
+.plan-price s{text-decoration:none;position:relative;display:table;margin:0 auto;}
+.plan-price s::after{content:"";position:absolute;left:-2px;right:-2px;top:52%;height:2px;background:var(--terra);transform:scaleX(0);transform-origin:left;transition:transform .5s ease;}
+.plan.counted .plan-price s::after{transform:scaleX(1);}
+.plan.counted .plan-price .new{animation:stamp .5s cubic-bezier(.3,1.8,.5,1);}
+@keyframes stamp{0%{transform:scale(1.5);}100%{transform:scale(1);}}
+.plan-price .new{display:inline-block;font-variant-numeric:tabular-nums;}
+
+/* explosão de pétalas na oferta */
+.burst-petal{position:absolute;top:0;left:0;width:14px;height:14px;border-radius:50% 0 50% 50%;pointer-events:none;z-index:1;}
+
+/* selo de garantia girando */
+.g-medal{transform-style:preserve-3d;}
+.guarantee.in .g-medal{animation:coin 1.6s .2s cubic-bezier(.2,.8,.2,1);}
+@keyframes coin{0%{transform:rotateY(0) scale(.5);}70%{transform:rotateY(1080deg) scale(1.15);}100%{transform:rotateY(1080deg) scale(1);}}
+
+/* vaso final crescendo */
+.big-plant{width:180px;margin:0 auto 10px;display:block;overflow:visible;}
+.big-plant .layer{transform:translateY(170px);transition:transform 1.1s cubic-bezier(.3,.7,.2,1);}
+.big-plant .l2{transition-delay:.7s;} .big-plant .l3{transition-delay:1.4s;}
+.big-plant.in .layer{transform:translateY(0);}
+.big-plant .flowers circle.f{transform-box:fill-box;transform-origin:center;transform:scale(0);}
+.big-plant.in .flowers circle.f{animation:foam .5s cubic-bezier(.3,1.7,.5,1) forwards;}
+@keyframes foam{to{transform:scale(1);}}
+
+/* trilha de pétalas no cursor (desktop) */
+.trail-petal{position:fixed;width:10px;height:10px;border-radius:50% 0 50% 50%;pointer-events:none;z-index:98;animation:trail .9s ease-out forwards;}
+@keyframes trail{to{transform:translateY(40px) rotate(200deg) scale(.3);opacity:0;}}
+
+@media (prefers-reduced-motion: reduce){
+  .hero h1 .w,.mock-product,.mock-tag,.plant-svg,.deco,.plant-hint{animation:none !important;opacity:1 !important;}
+  .drifter,.btn-terra::after,.dunk *,.mock-glow,.mock-shine{animation:none !important;}
+  .mock-shine{display:none;}
+  .plant-svg .grow,.plant-svg .bloom{transform:scale(1);} .plant-svg .jug{display:none;}
+  .js-rv .rv{opacity:1;translate:none;transition:none;}
+  .wave svg{animation:none !important;}
+  .chip{animation:none !important;opacity:1;}
+  .js-rv .notebook .pain-list li{clip-path:none;}
+  .note-under path{stroke-dashoffset:0;}
+  .drip-drop{display:none;}
+  .big-plant .layer{transform:none;transition:none;} .big-plant .flowers circle.f{transform:scale(1);}
+}
+</style>
+</head>
+<body>
+<div class="ribbon-bar"><span>🌱 Oferta especial para amantes de plantas — termina hoje <span id="ribbon-date">(--/--)</span></span><span class="timer" id="timer-ribbon">10:00</span></div>
+
+<!-- HERO -->
+<section class="hero"><div class="garland" aria-hidden="true"></div><div class="wrap-narrow center">
+  <span class="hero-kicker">Manual da Planta Saudável 🌱</span>
+  <span class="hero-tagline">Do Básico ao Cultivo Perfeito</span>
+  <h1>Descubra como cuidar das suas plantas, deixá-las mais bonitas e criar um jardim saudável mesmo começando do zero</h1>
+  <p class="hero-sub">Um guia completo para aprender rega, iluminação, adubação, mudas e cuidados essenciais para suas plantas crescerem fortes e cheias de vida.</p>
+  <div class="chips">
+    <span class="chip"><svg fill="none" stroke="currentColor" stroke-width="2.6" viewBox="0 0 24 24"><path d="M5 12l4 4L19 6"/></svg>Ideal para iniciantes</span>
+    <span class="chip"><svg fill="none" stroke="currentColor" stroke-width="2.6" viewBox="0 0 24 24"><path d="M5 12l4 4L19 6"/></svg>Linguagem simples</span>
+    <span class="chip"><svg fill="none" stroke="currentColor" stroke-width="2.6" viewBox="0 0 24 24"><path d="M5 12l4 4L19 6"/></svg>Aprenda no seu ritmo</span>
+  </div>
+
+  <!-- VSL: espaço reservado para o vídeo de apresentação -->
+  <div class="stage"><div class="frame">
+    <span class="frame-tag">Assista primeiro 🌿</span>
+    <div class="frame-inner" id="vsl">
+      <svg class="leafdec ld1" viewBox="0 0 80 80" fill="currentColor" aria-hidden="true"><path d="M8 72C6 40 24 14 68 8c2 40-14 62-50 66z"/><path d="M12 70C28 52 44 34 62 14" fill="none" stroke="#FFF8E7" stroke-width="2"/></svg>
+      <svg class="leafdec ld2" viewBox="0 0 80 80" fill="currentColor" aria-hidden="true"><path d="M8 72C6 40 24 14 68 8c2 40-14 62-50 66z"/><path d="M12 70C28 52 44 34 62 14" fill="none" stroke="#FFF8E7" stroke-width="2"/></svg>
+      <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></span>
+      <p>[Espaço reservado para vídeo de apresentação do Manual da Planta Saudável]</p>
+    </div>
+  </div></div>
+
+  <!-- Mockup do produto -->
+  <div class="mock-scene" id="mockScene">
+    <div class="mock-glow" aria-hidden="true"></div>
+    <div class="mock-stack" id="mockStack">
+      <div class="mock-product">
+        <div class="ebook" role="img" aria-label="Capa do ebook Manual da Planta Saudável">
+          <span class="eb-top">Guia completo</span>
+          <svg class="eb-art" viewBox="0 0 120 110" fill="currentColor" aria-hidden="true">
+            <path d="M60 104C58 70 60 44 60 22" fill="none" stroke="#FFF8E7" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M60 78C36 76 16 60 14 36c26 0 44 16 46 42z" opacity=".95"/>
+            <path d="M60 62C84 60 104 44 106 20c-26 0-44 16-46 42z" opacity=".8"/>
+            <path d="M60 40C46 32 42 16 48 4c14 6 20 22 12 36z" opacity=".95"/>
+            <circle cx="60" cy="14" r="6" fill="#E8AEB7"/>
+            <path d="M34 104h52l-6 -0c-2 0-2 0 0 0z" fill="none"/>
+          </svg>
+          <span class="eb-title">Manual da Planta Saudável</span>
+          <span class="eb-sub">Do Básico ao Cultivo Perfeito</span>
+        </div>
+        <span class="mock-shine" aria-hidden="true"></span>
+      </div>
+    </div>
+    <span class="mock-tag">Passo a passo simples</span>
+
+    <!-- vasinho sendo regado -->
+    <svg class="plant-svg" id="heroPlant" viewBox="0 0 220 230" role="img" aria-label="Vasinho de planta sendo regado">
+      <defs>
+        <linearGradient id="gPot" x1="0" x2="1"><stop offset="0" stop-color="#D8926F"/><stop offset=".5" stop-color="#C97C5D"/><stop offset="1" stop-color="#A9643F"/></linearGradient>
+        <linearGradient id="gCan" x1="0" x2="1"><stop offset="0" stop-color="#7FA24A"/><stop offset=".45" stop-color="#B4CC7C"/><stop offset="1" stop-color="#6E8F3E"/></linearGradient>
+      </defs>
+      <ellipse cx="110" cy="220" rx="70" ry="9" fill="rgba(0,0,0,.22)"/>
+      <path d="M64 156 L156 156 L147 208 C146 214 142 217 136 217 L84 217 C78 217 74 214 73 208 Z" fill="url(#gPot)"/>
+      <rect x="56" y="142" width="108" height="18" rx="7" fill="#D9906E"/>
+      <ellipse cx="110" cy="143" rx="48" ry="6" fill="#6B4F3A"/>
+      <g class="grow">
+        <path d="M110 143 C110 120 110 104 110 84" fill="none" stroke="#4F772D" stroke-width="4" stroke-linecap="round"/>
+        <path transform="translate(110 132) rotate(-58)" d="M0 0 C-13 -12 -13 -34 0 -50 C13 -34 13 -12 0 0Z" fill="#90A955"/>
+        <path transform="translate(110 132) rotate(58)" d="M0 0 C-13 -12 -13 -34 0 -50 C13 -34 13 -12 0 0Z" fill="#7FA24A"/>
+        <path transform="translate(110 116) rotate(-28)" d="M0 0 C-14 -14 -14 -40 0 -58 C14 -40 14 -14 0 0Z" fill="#4F772D"/>
+        <path transform="translate(110 116) rotate(30)" d="M0 0 C-14 -14 -14 -40 0 -58 C14 -40 14 -14 0 0Z" fill="#6A9038"/>
+        <path transform="translate(110 100) rotate(0)" d="M0 0 C-12 -12 -12 -34 0 -48 C12 -34 12 -12 0 0Z" fill="#90A955"/>
+      </g>
+      <g class="bloom"><circle cx="110" cy="46" r="9" fill="#E8AEB7"/><circle cx="103" cy="41" r="6" fill="#F3C9D0"/><circle cx="117" cy="41" r="6" fill="#F3C9D0"/><circle cx="110" cy="46" r="3.5" fill="#FFF8E7"/></g>
+      <ellipse class="splash" cx="106" cy="141" rx="14" ry="4" fill="none" stroke="#CFE8EE" stroke-width="2"/>
+      <path class="stream" pathLength="1" d="M100 52 C101 80 104 108 106 138" fill="none" stroke="#CFE8EE" stroke-width="5" stroke-linecap="round"/>
+      <g class="jug"><g class="jug-tilt">
+        <path d="M-2 14 C-24 14 -24 40 -4 40" fill="none" stroke="url(#gCan)" stroke-width="6" stroke-linecap="round"/>
+        <path d="M46 20 L82 -6 L88 -1 L52 34 Z" fill="url(#gCan)"/>
+        <ellipse cx="86" cy="-3" rx="6" ry="3.5" fill="#4F772D" transform="rotate(-38 86 -3)"/>
+        <path d="M2 6 H48 C52 6 54 9 54 12 L52 42 C52 48 48 52 42 52 H8 C2 52 -2 48 -2 42 L-4 12 C-4 9 -2 6 2 6Z" fill="url(#gCan)"/>
+        <path d="M6 12 C20 20 34 20 48 12" fill="none" stroke="rgba(255,255,255,.4)" stroke-width="3" stroke-linecap="round"/>
+      </g></g>
+    </svg>
+    <span class="plant-hint">toque no vasinho 🌿</span>
+
+    <!-- suculenta -->
+    <svg class="deco c1" viewBox="0 0 100 100" aria-hidden="true">
+      <path d="M22 62 L78 62 L71 92 C70 96 67 98 63 98 L37 98 C33 98 30 96 29 92 Z" fill="#D9906E"/>
+      <rect x="18" y="54" width="64" height="12" rx="5" fill="#E7A582"/>
+      <g fill="#90A955">
+        <ellipse cx="50" cy="42" rx="9" ry="20"/><ellipse cx="50" cy="42" rx="9" ry="20" transform="rotate(50 50 54)"/><ellipse cx="50" cy="42" rx="9" ry="20" transform="rotate(-50 50 54)"/>
+        <ellipse cx="50" cy="42" rx="8" ry="17" transform="rotate(100 50 54)" fill="#7FA24A"/><ellipse cx="50" cy="42" rx="8" ry="17" transform="rotate(-100 50 54)" fill="#7FA24A"/>
+      </g>
+      <ellipse cx="50" cy="46" rx="6" ry="11" fill="#B4CC7C"/>
+    </svg>
+    <!-- flor rosa -->
+    <svg class="deco c2" viewBox="0 0 100 100" aria-hidden="true">
+      <path d="M50 96 C50 74 50 62 50 50" fill="none" stroke="#4F772D" stroke-width="4" stroke-linecap="round"/>
+      <path d="M50 80 C36 78 28 70 26 60 C40 60 48 68 50 80z" fill="#90A955"/>
+      <g fill="#E8AEB7"><circle cx="50" cy="26" r="15"/><circle cx="34" cy="38" r="15"/><circle cx="66" cy="38" r="15"/><circle cx="40" cy="54" r="15" transform="translate(6 -4)"/><circle cx="60" cy="54" r="15" transform="translate(-6 -4)"/></g>
+      <circle cx="50" cy="40" r="9" fill="#FFF3D1"/>
+    </svg>
+  </div>
+  <span class="ph-label">[Mockup do Manual da Planta Saudável]</span>
+
+  <a class="btn btn-terra" href="#planos" style="margin-top:22px;">Quero cuidar melhor das minhas plantas</a>
+  <p class="safe">Compra 100% segura</p>
+  <div class="stat-row">
+    <div class="stat"><b>Rega</b><span>na medida certa</span></div>
+    <div class="stat"><b>Luz</b><span>ideal para cada planta</span></div>
+    <div class="stat"><b>Adubação</b><span>simples e caseira</span></div>
+    <div class="stat"><b>Mudas</b><span>multiplique seu jardim</span></div>
+  </div>
+</div></section>
+
+<!-- DOR -->
+<section class="section s-sand"><div class="wrap-narrow">
+  <div class="notebook">
+    <h3>Você ama plantas, mas já perdeu várias sem entender o motivo?</h3>
+    <ul class="pain-list">
+      <li><span class="x">❌</span>Minha planta fica com folhas amarelas</li>
+      <li><span class="x">❌</span>Nunca sei quando devo regar</li>
+      <li><span class="x">❌</span>Compro plantas lindas e elas acabam morrendo</li>
+      <li><span class="x">❌</span>Não sei qual terra ou vaso usar</li>
+      <li><span class="x">❌</span>Minha planta parece parada sem crescer</li>
+    </ul>
+  </div>
+  <p class="turn">Agora você entende o que cada planta precisa — e cuida delas com confiança, um dia de cada vez.</p>
+  <div class="center"><a class="btn btn-cream" href="#planos">Quero entender minhas plantas</a></div>
+</div></section>
+
+<!-- PRODUTO PRINCIPAL + CAMINHO -->
+<section class="section s-cream"><div class="wrap">
+  <div class="center"><span class="note">Conheça o guia</span><h2 class="title">Manual da Planta Saudável</h2>
+  <p class="lead">Um passo a passo completo para você entender as necessidades das suas plantas e criar uma rotina simples de cuidados.</p></div>
+  <div class="ebook-wrap">
+    <div class="ebook" role="img" aria-label="Capa do ebook Manual da Planta Saudável">
+      <span class="eb-top">Guia completo</span>
+      <svg class="eb-art" viewBox="0 0 120 110" fill="currentColor" aria-hidden="true">
+        <path d="M60 104C58 70 60 44 60 22" fill="none" stroke="#FFF8E7" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M60 78C36 76 16 60 14 36c26 0 44 16 46 42z" opacity=".95"/>
+        <path d="M60 62C84 60 104 44 106 20c-26 0-44 16-46 42z" opacity=".8"/>
+        <path d="M60 40C46 32 42 16 48 4c14 6 20 22 12 36z" opacity=".95"/>
+        <circle cx="60" cy="14" r="6" fill="#E8AEB7"/>
+      </svg>
+      <span class="eb-title">Manual da Planta Saudável</span>
+      <span class="eb-sub">Do Básico ao Cultivo Perfeito</span>
+    </div>
+    <span class="ph-label">[Mockup do ebook]</span>
+  </div>
+  <div class="center"><span class="note">Seu caminho, passo a passo</span><h2 class="title" style="font-size:clamp(22px,5.4vw,30px);">Do primeiro vasinho ao cultivo perfeito</h2></div>
+  <ol class="timeline">
+    <li class="tl"><h4>Conheça suas plantas</h4><p>Descubra o que cada espécie pede e escolha as que combinam com a sua casa.</p></li>
+    <li class="tl"><h4>Rega correta</h4><p>Saiba quando, quanto e como regar, sem afogar nem deixar secar.</p></li>
+    <li class="tl"><h4>Luz e lugar ideais</h4><p>Entenda a iluminação certa para cada cantinho, da sala à varanda.</p></li>
+    <li class="tl"><h4>Terra e adubação</h4><p>Escolha vaso, terra e adubo do jeito simples, sem gastar muito.</p></li>
+    <li class="tl"><h4>Cresça e multiplique</h4><p>Faça mudas, trate pragas e veja o seu jardim crescer cheio de vida.</p></li>
+  </ol>
+</div></section>
+
+<!-- DEMONSTRAÇÃO -->
+<section class="section s-sand"><div class="wrap">
+  <div class="center"><span class="note">Espie por dentro</span><h2 class="title">Veja tudo que você recebe dentro do Manual</h2></div>
+
+  <h3 class="sub-gallery">Capítulos do Manual</h3>
+  <div class="cf"><button aria-label="Ver anterior" class="cf-nav prev">‹</button><div class="cf-track tall">
+    <div class="cf-slide" data-caption="🌱 Plantas dentro de casa"><div class="ph"><span class="em">🪴</span><b>Plantas dentro de casa</b><small>[Imagem do produto aqui]</small></div></div>
+    <div class="cf-slide" data-caption="🌱 Rega correta"><div class="ph"><span class="em">💧</span><b>Rega correta</b><small>[Imagem do produto aqui]</small></div></div>
+    <div class="cf-slide" data-caption="🌱 Iluminação ideal"><div class="ph"><span class="em">☀️</span><b>Iluminação ideal</b><small>[Imagem do produto aqui]</small></div></div>
+    <div class="cf-slide" data-caption="🌱 Adubação"><div class="ph"><span class="em">🌿</span><b>Adubação</b><small>[Imagem do produto aqui]</small></div></div>
+    <div class="cf-slide" data-caption="🌱 Plantas resistentes"><div class="ph"><span class="em">🌵</span><b>Plantas resistentes</b><small>[Imagem do produto aqui]</small></div></div>
+    <div class="cf-slide" data-caption="🌱 Pragas e doenças"><div class="ph"><span class="em">🍂</span><b>Pragas e doenças</b><small>[Imagem do produto aqui]</small></div></div>
+  </div><button aria-label="Ver próximo" class="cf-nav next">›</button></div>
+  <p class="cf-caption"></p><div class="cf-dots"></div>
+
+  <h3 class="sub-gallery">Bônus que acompanham o Manual</h3>
+  <div class="cf"><button aria-label="Ver anterior" class="cf-nav prev">‹</button><div class="cf-track tall">
+    <div class="cf-slide" data-caption="🎁 Calendário de Rega"><div class="ph bonus-ph"><span class="em">📅</span><b>Calendário de Rega</b><small>[Imagem do produto aqui]</small></div></div>
+    <div class="cf-slide" data-caption="🎁 Guia Plantas Fáceis"><div class="ph bonus-ph"><span class="em">🌱</span><b>Guia Plantas Fáceis</b><small>[Imagem do produto aqui]</small></div></div>
+    <div class="cf-slide" data-caption="🎁 SOS Planta Doente"><div class="ph bonus-ph"><span class="em">🩹</span><b>SOS Planta Doente</b><small>[Imagem do produto aqui]</small></div></div>
+    <div class="cf-slide" data-caption="🎁 Adubos Caseiros"><div class="ph bonus-ph"><span class="em">🥬</span><b>Adubos Caseiros</b><small>[Imagem do produto aqui]</small></div></div>
+    <div class="cf-slide" data-caption="🎁 Guia de Mudas"><div class="ph bonus-ph"><span class="em">🌸</span><b>Guia de Mudas</b><small>[Imagem do produto aqui]</small></div></div>
+  </div><button aria-label="Ver próximo" class="cf-nav next">›</button></div>
+  <p class="cf-caption"></p><div class="cf-dots"></div>
+  <p class="print-note">Material 100% digital: consulte no celular, tablet ou computador — ou imprima suas páginas favoritas.</p>
+</div></section>
+
+<!-- PARA QUEM É -->
+<section class="section s-cream"><div class="wrap-narrow">
+  <div class="center"><h2 class="title" style="font-size:clamp(22px,5.4vw,30px);margin-bottom:24px;">Feito para quem ama plantas</h2></div>
+  <div class="grade-grid">
+    <div class="grade-box"><span class="hand">Quem está começando</span><div class="pills"><span class="pill">Primeira plantinha</span><span class="pill">Sem experiência</span><span class="pill">Passo a passo</span></div></div>
+    <div class="grade-box"><span class="hand">Quem já perdeu plantas</span><div class="pills"><span class="pill">Folhas amarelas</span><span class="pill">Rega errada</span><span class="pill">Falta de luz</span></div></div>
+    <div class="grade-box"><span class="hand">Quem ama decorar</span><div class="pills"><span class="pill">Varanda</span><span class="pill">Jardim</span><span class="pill">Casa aconchegante</span></div></div>
+  </div>
+</div></section>
+
+<!-- SELOS -->
+<section class="section s-leaf" style="padding-top:44px;padding-bottom:44px;"><div class="wrap-narrow"><div class="seals">
+  <div class="seal"><svg fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg><h4>Acesso imediato</h4></div>
+  <div class="seal"><svg fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M5 19C4 10 9 4 20 4c0 11-6 16-15 15z"/><path d="M5 19c3-5 6-8 10-11"/></svg><h4>Linguagem simples</h4></div>
+  <div class="seal"><svg fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M12 2l8 3v6c0 5-3.4 8.6-8 11-4.6-2.4-8-6-8-11V5z"/><path d="M9 12l2 2 4-4"/></svg><h4>Garantia de 7 dias</h4></div>
+  <div class="seal"><svg fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><h4>Aprenda no seu ritmo</h4></div>
+</div></div></section>
+
+<!-- BÔNUS -->
+<section class="section s-leaf" style="padding-top:20px;"><div class="wrap">
+  <div class="center"><span class="note">Seis bônus inclusos no Jardim Saudável Premium</span><h2 class="title">Além do Manual, tudo para o seu jardim florescer</h2></div>
+  <p class="bonus-total">No total, <s>R$ 218,40</s> em bônus — grátis hoje</p>
+  <p class="bonus-sub">Tudo incluso no plano Jardim Saudável Premium, sem taxa extra.</p>
+  <div class="bonus-grid">
+    <div class="bonus-card"><div class="bonus-img"><div class="ph bonus-ph"><span class="em">📅</span><small>[Imagem do produto aqui]</small></div></div><span class="bonus-tag">Bônus 1</span><h4>Calendário de Rega das Plantas</h4><p>Aprenda quando regar cada planta, intervalos corretos e sinais de falta de água.</p><div class="bonus-foot"><s>R$ 27,90</s><span class="free">Grátis</span></div></div>
+    <div class="bonus-card"><div class="bonus-img"><div class="ph bonus-ph"><span class="em">🌱</span><small>[Imagem do produto aqui]</small></div></div><span class="bonus-tag">Bônus 2</span><h4>Guia das Plantas Mais Fáceis de Cuidar</h4><p>Inclui:</p><ul><li>🌱 Plantas internas</li><li>🌱 Varandas</li><li>🌱 Pouca água</li><li>🌱 Plantas resistentes</li></ul><div class="bonus-foot"><s>R$ 37,90</s><span class="free">Grátis</span></div></div>
+    <div class="bonus-card"><div class="bonus-img"><div class="ph bonus-ph"><span class="em">🩹</span><small>[Imagem do produto aqui]</small></div></div><span class="bonus-tag">Bônus 3</span><h4>SOS Planta Doente</h4><p>Resolva:</p><ul><li>🍂 Folhas amarelas</li><li>🍂 Folhas caindo</li><li>🍂 Manchas</li><li>🍂 Falta de crescimento</li></ul><div class="bonus-foot"><s>R$ 39,90</s><span class="free">Grátis</span></div></div>
+    <div class="bonus-card"><div class="bonus-img"><div class="ph bonus-ph"><span class="em">🥬</span><small>[Imagem do produto aqui]</small></div></div><span class="bonus-tag">Bônus 4</span><h4>Adubos Caseiros Para Plantas Fortes</h4><p>Receitas simples, com ingredientes que você já tem em casa, para nutrir suas plantas.</p><div class="bonus-foot"><s>R$ 29,90</s><span class="free">Grátis</span></div></div>
+    <div class="bonus-card"><div class="bonus-img"><div class="ph bonus-ph"><span class="em">🐛</span><small>[Imagem do produto aqui]</small></div></div><span class="bonus-tag">Bônus 5</span><h4>Guia de Pragas e Doenças</h4><p>Aprenda a identificar e tratar os problemas mais comuns antes que se espalhem.</p><div class="bonus-foot"><s>R$ 34,90</s><span class="free">Grátis</span></div></div>
+    <div class="bonus-card"><div class="bonus-img"><div class="ph bonus-ph"><span class="em">🌸</span><small>[Imagem do produto aqui]</small></div></div><span class="bonus-tag">Bônus 6</span><h4>Como Fazer Mudas e Multiplicar Plantas</h4><p>Passo a passo para criar novas plantinhas a partir das que você já cultiva.</p><div class="bonus-foot"><s>R$ 47,90</s><span class="free">Grátis</span></div></div>
+  </div>
+</div></section>
+
+<!-- OFERTA -->
+<section class="section offer" id="planos"><div class="menu-board">
+  <div class="menu-head"><svg class="dunk" viewBox="0 0 140 130" aria-hidden="true">
+      <path class="biscuit" d="M70 6 C70 6 60 20 60 27 A10 10 0 0 0 80 27 C80 20 70 6 70 6Z" fill="#CFE8EE"/>
+      <ellipse cx="70" cy="122" rx="56" ry="7" fill="rgba(0,0,0,.3)"/>
+      <path d="M32 82 L108 82 L101 116 C100 120 97 122 93 122 L47 122 C43 122 40 120 39 116 Z" fill="#C97C5D"/>
+      <rect x="26" y="72" width="88" height="14" rx="6" fill="#D9906E"/>
+      <ellipse cx="70" cy="73" rx="38" ry="5" fill="#6B4F3A"/>
+      <g class="wet">
+        <path d="M70 73 C70 64 70 58 70 50" fill="none" stroke="#90A955" stroke-width="3" stroke-linecap="round"/>
+        <path d="M70 62 C58 60 52 52 52 44 C62 44 68 52 70 62z" fill="#90A955"/>
+        <path d="M70 58 C82 56 88 48 88 40 C78 40 72 48 70 58z" fill="#B4CC7C"/>
+      </g>
+      <ellipse class="ripple" cx="70" cy="73" rx="14" ry="3" fill="none" stroke="#CFE8EE" stroke-width="2"/>
+    </svg><span class="note">Escolha o seu cantinho no jardim</span><h2>Escolha o seu plano</h2>
+    <span class="promo">A promoção encerra em <span class="timer" id="timer-plans">10:00</span></span></div>
+  <div class="plans">
+    <div class="plan basic">
+      <div class="plan-name">🌱 Manual da Planta Saudável</div>
+      <div class="plan-price"><s>De R$ 47,90</s><span class="new">R$ 10<small>,00</small></span></div>
+      <div class="plan-cap">pagamento único</div>
+      <ul class="menu-list">
+        <li>Manual completo<span class="dots"></span><span class="ok">✔</span></li>
+        <li>Acesso imediato<span class="dots"></span><span class="ok">✔</span></li>
+        <li>Guia passo a passo<span class="dots"></span><span class="ok">✔</span></li>
+      </ul>
+      <a class="btn btn-cream" href="#" id="btn-basico">Quero o Manual</a>
+    </div>
+    <div class="plan featured">
+      <span class="plan-flag">★ Mais escolhido pelas jardineiras</span>
+      <div class="plan-name">🌸 Jardim Saudável Premium</div>
+      <div class="plan-price"><s>De R$ 67,90</s><span class="new">R$ 19<small>,90</small></span></div>
+      <div class="plan-cap">pagamento único</div>
+      <ul class="menu-list">
+        <li>Manual completo<span class="dots"></span><span class="ok">✔</span></li>
+      </ul>
+      <div class="menu-sep">+ seis bônus</div>
+      <ul class="menu-list bonus">
+        <li>✔ Calendário de Rega<span class="dots"></span><span class="tag">Bônus</span></li>
+        <li>✔ Guia Plantas Fáceis<span class="dots"></span><span class="tag">Bônus</span></li>
+        <li>✔ SOS Planta Doente<span class="dots"></span><span class="tag">Bônus</span></li>
+        <li>✔ Adubos Caseiros<span class="dots"></span><span class="tag">Bônus</span></li>
+        <li>✔ Guia de Pragas<span class="dots"></span><span class="tag">Bônus</span></li>
+        <li>✔ Guia de Mudas<span class="dots"></span><span class="tag">Bônus</span></li>
+      </ul>
+      <!-- TROQUE o href abaixo pelo link de checkout do plano completo -->
+      <a class="btn btn-terra" href="#checkout-completo" id="btn-completo">Quero o Jardim Saudável Premium</a>
+      <p class="plan-note">📧 Acesso imediato no seu e-mail</p>
+    </div>
+  </div>
+  <p class="safe">Compra 100% segura</p>
+</div></section>
+
+<!-- ACESSO -->
+<section class="section s-cream"><div class="wrap-narrow">
+  <h2 class="title center" style="margin-bottom:28px;">Como você recebe o acesso</h2>
+  <div class="steps">
+    <div class="step"><div class="step-n">1</div><p>A compra é confirmada na hora</p></div>
+    <div class="step"><div class="step-n">2</div><p>Você recebe o link por e-mail e WhatsApp</p></div>
+    <div class="step"><div class="step-n">3</div><p>Abre o Manual e já começa a cuidar melhor das suas plantas</p></div>
+  </div>
+</div></section>
+
+<!-- DEPOIMENTOS -->
+<section class="section s-rose"><div class="wrap">
+  <div class="center"><span class="note">Depoimentos</span><h2 class="title">O que as jardineiras estão dizendo</h2></div>
+  <!-- Substitua os placeholders por depoimentos e fotos reais de clientes -->
+  <div class="cf"><button aria-label="Depoimento anterior" class="cf-nav prev">‹</button><div class="cf-track wide">
+    <div class="cf-slide"><div class="tcard"><div class="who"><div class="ph-box photo">[Foto da cliente]</div><div><b>[Nome da cliente]</b><span class="stars">★★★★★</span></div></div><div class="ph-box ba">[Antes e depois da planta]</div><blockquote>“Depois que aprendi os cuidados certos, minhas plantas ficaram muito mais bonitas.”</blockquote></div></div>
+    <div class="cf-slide"><div class="tcard"><div class="who"><div class="ph-box photo">[Foto da cliente]</div><div><b>[Nome da cliente]</b><span class="stars">★★★★★</span></div></div><div class="ph-box ba">[Antes e depois da planta]</div><blockquote>“Hoje tenho orgulho do meu jardim dentro de casa.”</blockquote></div></div>
+    <div class="cf-slide"><div class="tcard"><div class="who"><div class="ph-box photo">[Foto da cliente]</div><div><b>[Nome da cliente]</b><span class="stars">★★★★★</span></div></div><div class="ph-box ba">[Antes e depois da planta]</div><blockquote>[Depoimento da cliente aqui]</blockquote></div></div>
+    <div class="cf-slide"><div class="tcard"><div class="who"><div class="ph-box photo">[Foto da cliente]</div><div><b>[Nome da cliente]</b><span class="stars">★★★★★</span></div></div><div class="ph-box ba">[Antes e depois da planta]</div><blockquote>[Depoimento da cliente aqui]</blockquote></div></div>
+  </div><button aria-label="Próximo depoimento" class="cf-nav next">›</button></div>
+  <div class="cf-dots"></div>
+</div></section>
+
+<!-- GARANTIA -->
+<section class="section s-soil" style="padding-top:50px;padding-bottom:50px;"><div class="wrap-narrow"><div class="guarantee">
+  <div class="g-medal"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 20C3 10 9 3 21 3c0 12-7 18-16 17z"/></svg>7 dias</div>
+  <span class="g-cert">Certificado de garantia</span>
+  <h3>Seu jardim mais bonito ou você pode avaliar o material durante 7 dias</h3>
+  <p>Pagamento único, sem mensalidade. Se em até 7 dias você achar que o material não é para você, é só pedir o reembolso — devolvemos 100% do valor, sem perguntas e sem burocracia.</p>
+</div></div></section>
+
+<!-- FAQ -->
+<section class="section s-sand"><div class="wrap-narrow">
+  <h2 class="title center" style="margin-bottom:26px;">Perguntas frequentes</h2>
+  <div class="faq">
+    <details open><summary>Serve para quem nunca cuidou de plantas?<span class="plus"></span></summary><p class="answer">Serve, sim! O Manual foi feito para quem está começando: a linguagem é simples e o passo a passo leva você do básico ao cultivo perfeito, sem termos difíceis.</p></details>
+    <details><summary>Preciso ter muitas plantas?<span class="plus"></span></summary><p class="answer">Não. Você pode aplicar tudo com uma única plantinha ou com um jardim inteiro. Os cuidados ensinados valem para qualquer quantidade.</p></details>
+    <details><summary>Serve para plantas dentro de casa?<span class="plus"></span></summary><p class="answer">Sim. Há um capítulo dedicado às plantas de interior, com dicas de iluminação, rega e escolha do melhor lugar para cada espécie.</p></details>
+    <details><summary>Consigo aplicar mesmo sendo iniciante?<span class="plus"></span></summary><p class="answer">Consegue. Tudo é explicado em etapas curtas e práticas, para você criar uma rotina simples de cuidados no seu ritmo.</p></details>
+    <details><summary>Preciso comprar materiais caros?<span class="plus"></span></summary><p class="answer">Não. O Manual ensina a cuidar das suas plantas com itens simples e acessíveis, incluindo adubos caseiros feitos com o que você já tem em casa.</p></details>
+  </div>
+</div></section>
+
+<!-- FINAL -->
+<section class="section s-leaf final"><div class="wrap-narrow center">
+  <svg class="big-plant" id="bigPlant" viewBox="0 0 200 210" aria-hidden="true">
+    <defs>
+      <clipPath id="growClip"><rect x="0" y="0" width="200" height="140"/></clipPath>
+      <linearGradient id="gPot2" x1="0" x2="1"><stop offset="0" stop-color="#D8926F"/><stop offset=".5" stop-color="#C97C5D"/><stop offset="1" stop-color="#A9643F"/></linearGradient>
+    </defs>
+    <ellipse cx="100" cy="200" rx="70" ry="8" fill="rgba(0,0,0,.28)"/>
+    <g clip-path="url(#growClip)">
+      <g class="layer l1"><path d="M100 150 C100 110 100 80 100 44" fill="none" stroke="#FFF8E7" stroke-width="4" stroke-linecap="round"/></g>
+      <g class="layer l2">
+        <path transform="translate(100 128) rotate(-60)" d="M0 0 C-16 -14 -16 -40 0 -60 C16 -40 16 -14 0 0Z" fill="#B4CC7C"/>
+        <path transform="translate(100 128) rotate(60)" d="M0 0 C-16 -14 -16 -40 0 -60 C16 -40 16 -14 0 0Z" fill="#90A955"/>
+        <path transform="translate(100 100) rotate(-30)" d="M0 0 C-16 -14 -16 -42 0 -62 C16 -42 16 -14 0 0Z" fill="#90A955"/>
+        <path transform="translate(100 100) rotate(32)" d="M0 0 C-16 -14 -16 -42 0 -62 C16 -42 16 -14 0 0Z" fill="#B4CC7C"/>
+        <path transform="translate(100 72) rotate(0)" d="M0 0 C-14 -12 -14 -34 0 -48 C14 -34 14 -12 0 0Z" fill="#90A955"/>
+      </g>
+    </g>
+    <g class="flowers" fill="#E8AEB7">
+      <circle class="f" cx="100" cy="24" r="10" style="animation-delay:2.2s"/><circle class="f" cx="88" cy="30" r="7" fill="#F3C9D0" style="animation-delay:2.3s"/>
+      <circle class="f" cx="112" cy="30" r="7" fill="#F3C9D0" style="animation-delay:2.4s"/><circle class="f" cx="40" cy="70" r="8" style="animation-delay:2.5s"/>
+      <circle class="f" cx="160" cy="70" r="8" style="animation-delay:2.6s"/><circle class="f" cx="100" cy="24" r="4" fill="#FFF8E7" style="animation-delay:2.7s"/>
+    </g>
+    <path d="M56 152 L144 152 L134 192 C133 197 129 200 123 200 L77 200 C71 200 67 197 66 192 Z" fill="url(#gPot2)"/>
+    <rect x="48" y="140" width="104" height="18" rx="7" fill="#D9906E"/>
+    <path d="M66 166 L72 190" stroke="rgba(255,255,255,.3)" stroke-width="5" stroke-linecap="round"/>
+  </svg>
+  <h2>Suas plantas merecem viver — e você merece ter orgulho do seu jardim</h2>
+  <p class="lead">Menos plantas perdidas, mais folhas novas, flores e alegria em cuidar da sua casa todos os dias.</p>
+  <a class="btn btn-terra" href="#planos">Quero meu Manual da Planta Saudável</a>
+  <div class="trust-row"><span>Acesso imediato</span><span>Pagamento único</span><span>Garantia de 7 dias</span></div>
+</div></section>
+
+<footer>🌱 Manual da Planta Saudável — Do Básico ao Cultivo Perfeito.</footer>
+
+<!-- Popup de prova social: nomes/horários são ilustrativos. Substitua por vendas reais ou remova. -->
+<div class="social-proof" id="social-proof"><button aria-label="Fechar" class="sp-close" id="social-proof-close">✕</button><div class="sp-avatar" id="social-proof-avatar">J</div><div><div class="sp-text"><b id="social-proof-name">Juliana Ribeiro</b> comprou o <span id="social-proof-plan">Jardim Saudável Premium</span></div><div class="sp-meta"><span class="sp-dot"></span><span>Compra recente · <span id="social-proof-time">agora</span></span></div></div></div>
+
+<div class="upsell-overlay" id="upsell-overlay"><div class="upsell-modal" role="dialog" aria-modal="true" aria-labelledby="upsell-title">
+  <button aria-label="Fechar" class="upsell-close" id="upsell-close">✕</button>
+  <span class="upsell-kicker">Espere um pouco 🌸</span>
+  <h3 id="upsell-title">Leve o Jardim Saudável Premium por mais R$ 9,90</h3>
+  <p class="upsell-desc">Por apenas <b>+ R$ 9,90</b> você leva o Manual e os seis bônus para o seu jardim florescer:</p>
+  <ul class="upsell-list">
+    <li>Calendário de Rega das Plantas</li>
+    <li>Guia das Plantas Mais Fáceis de Cuidar</li>
+    <li>SOS Planta Doente e Adubos Caseiros</li>
+    <li>Guia de Pragas e Guia de Mudas</li>
+  </ul>
+  <div class="upsell-price"><span class="amount">+ R$ 9,90</span></div>
+  <div class="upsell-actions">
+    <!-- TROQUE os hrefs abaixo pelos links de checkout (upgrade e plano básico) -->
+    <a class="btn btn-terra" href="#checkout-upgrade" id="upsell-accept">Quero o Premium por + R$ 9,90</a>
+    <a class="upsell-decline" href="#checkout-basico" id="upsell-decline">Não, quero continuar só com o Manual</a>
+  </div>
+</div></div>
+
+<script>
+// UTM: repassa os parâmetros do anúncio para os links de checkout externos
+window.addEventListener('load', function(){
+  var p = new URLSearchParams(window.location.search);
+  var utms = ['utm_source','utm_medium','utm_campaign','utm_term','utm_content'];
+  document.querySelectorAll('a').forEach(function(link){
+    var raw = link.getAttribute('href') || '';
+    if(/^https?:\/\//i.test(raw)){
+      var u = new URL(link.href);
+      utms.forEach(function(k){ if(p.has(k)) u.searchParams.set(k, p.get(k)); });
+      link.href = u.toString();
+    }
+  });
+});
+
+// Coverflow 3D (setas, pontos, toque nas laterais e swipe)
+document.querySelectorAll('.cf').forEach(function(wrap){
+  var track = wrap.querySelector('.cf-track');
+  var slides = [].slice.call(track.querySelectorAll('.cf-slide'));
+  var n = slides.length, cur = 0;
+  var after = wrap.nextElementSibling, caption = null, dotsWrap = null;
+  if(after && after.classList.contains('cf-caption')){ caption = after; after = after.nextElementSibling; }
+  if(after && after.classList.contains('cf-dots')) dotsWrap = after;
+  var dots = [];
+  if(dotsWrap){ slides.forEach(function(_, i){ var d = document.createElement('span'); d.className = 'dot'; d.addEventListener('click', function(){ go(i); }); dotsWrap.appendChild(d); dots.push(d); }); }
+  function render(){
+    slides.forEach(function(s, i){
+      s.classList.remove('pos-center','pos-left','pos-right');
+      var diff = (i - cur + n) % n;
+      if(diff === 0) s.classList.add('pos-center');
+      else if(diff === 1) s.classList.add('pos-right');
+      else if(diff === n - 1) s.classList.add('pos-left');
+    });
+    dots.forEach(function(d, i){ d.classList.toggle('active', i === cur); });
+    if(caption){ caption.textContent = slides[cur].getAttribute('data-caption') || ''; }
+  }
+  function go(i){ cur = (i + n) % n; render(); }
+  wrap.querySelector('.prev').addEventListener('click', function(){ go(cur - 1); });
+  wrap.querySelector('.next').addEventListener('click', function(){ go(cur + 1); });
+  slides.forEach(function(s, i){ s.addEventListener('click', function(){ if(!s.classList.contains('pos-center')) go(i); }); });
+  var sx = null;
+  track.addEventListener('touchstart', function(e){ sx = e.touches[0].clientX; }, {passive:true});
+  track.addEventListener('touchend', function(e){
+    if(sx === null) return; var dx = e.changedTouches[0].clientX - sx;
+    if(dx > 40) go(cur - 1); else if(dx < -40) go(cur + 1); sx = null;
+  });
+  render();
+});
+
+// Popup de prova social (dados ilustrativos)
+(function(){
+  var box = document.getElementById('social-proof');
+  var nameEl = document.getElementById('social-proof-name'), avatarEl = document.getElementById('social-proof-avatar');
+  var planEl = document.getElementById('social-proof-plan'), timeEl = document.getElementById('social-proof-time');
+  var entries = [
+    { name:'Juliana Ribeiro', plan:'Jardim Saudável Premium', time:'agora' },
+    { name:'Marta Andrade', plan:'Manual da Planta Saudável', time:'há 2 min' },
+    { name:'Camila Souza', plan:'Jardim Saudável Premium', time:'há 5 min' },
+    { name:'Regina Lima', plan:'Jardim Saudável Premium', time:'há 8 min' },
+    { name:'Fernanda Costa', plan:'Manual da Planta Saudável', time:'há 12 min' }
+  ];
+  var dismissed = false, idx = 0;
+  document.getElementById('social-proof-close').addEventListener('click', function(e){ e.stopPropagation(); dismissed = true; box.classList.remove('show'); });
+  box.addEventListener('click', function(){ box.classList.remove('show'); });
+  function showNext(){
+    if(dismissed) return;
+    var e = entries[idx++ % entries.length];
+    nameEl.textContent = e.name; avatarEl.textContent = e.name.charAt(0); planEl.textContent = e.plan; timeEl.textContent = e.time;
+    box.classList.add('show'); setTimeout(function(){ box.classList.remove('show'); }, 5000);
+  }
+  setTimeout(showNext, 4000); setInterval(showNext, 14000);
+})();
+
+// Upsell no clique do plano básico
+(function(){
+  var btn = document.getElementById('btn-basico'), ov = document.getElementById('upsell-overlay');
+  btn.addEventListener('click', function(e){ e.preventDefault(); ov.classList.add('open'); });
+  function close(){ ov.classList.remove('open'); }
+  document.getElementById('upsell-close').addEventListener('click', close);
+  ov.addEventListener('click', function(e){ if(e.target === ov) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') close(); });
+})();
+
+// Data de hoje + cronômetro
+(function(){
+  var d = new Date();
+  document.getElementById('ribbon-date').textContent = '(' + String(d.getDate()).padStart(2,'0') + '/' + String(d.getMonth()+1).padStart(2,'0') + ')';
+  var total = 10*60, a = document.getElementById('timer-ribbon'), b = document.getElementById('timer-plans');
+  function r(){ var t = String(Math.floor(total/60)).padStart(2,'0') + ':' + String(total%60).padStart(2,'0'); a.textContent = t; b.textContent = t; }
+  r(); setInterval(function(){ total = Math.max(0, total-1); r(); }, 1000);
+})();
+</script>
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var PETALS = ['#E8AEB7','#F3C9D0','#90A955','#B4CC7C','#C97C5D'];
+
+  // Título: palavras sobem uma a uma
+  var h1 = document.querySelector('.hero h1');
+  if(h1 && !reduce){
+    h1.innerHTML = h1.textContent.trim().split(/\s+/).map(function(w, i){ return '<span class="w" style="--i:' + i + '">' + w + '</span>'; }).join(' ');
+  }
+
+  // Folhinhas e pétalas flutuando no hero
+  var hero = document.querySelector('.hero');
+  if(hero && !reduce){
+    var drifters = document.createElement('div'); drifters.className = 'drifters'; drifters.setAttribute('aria-hidden','true');
+    for(var i = 0; i < 10; i++){
+      var b = document.createElement('span'); b.className = 'drifter' + (i % 3 === 0 ? ' pink' : '');
+      b.style.left = (5 + Math.random() * 90) + '%';
+      b.style.top = (55 + Math.random() * 45) + '%';
+      b.style.animationDuration = (9 + Math.random() * 8) + 's';
+      b.style.animationDelay = (-Math.random() * 12) + 's';
+      var s = .6 + Math.random() * .8; b.style.width = (18 * s) + 'px'; b.style.height = (18 * s) + 'px';
+      drifters.appendChild(b);
+    }
+    hero.insertBefore(drifters, hero.firstChild);
+  }
+
+  // Mockup inclina seguindo o dedo/mouse
+  var scene = document.getElementById('mockScene'), stack = document.getElementById('mockStack');
+  if(scene && stack && !reduce){
+    scene.addEventListener('pointermove', function(e){
+      var r = scene.getBoundingClientRect();
+      var x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+      stack.style.setProperty('--ry', (x * 22) + 'deg');
+      stack.style.setProperty('--rx', (-y * 14) + 'deg');
+    });
+    scene.addEventListener('pointerleave', function(){ stack.style.setProperty('--ry','0deg'); stack.style.setProperty('--rx','0deg'); });
+    // no celular, balança levemente conforme a rolagem
+    window.addEventListener('scroll', function(){
+      var y = Math.min(window.scrollY, 600) / 600;
+      stack.style.setProperty('--rx', (y * 18) + 'deg');
+    }, {passive:true});
+  }
+
+  // Toque no vasinho: rega de novo
+  var plant = document.getElementById('heroPlant');
+  if(plant){
+    if('IntersectionObserver' in window){
+      var pio = new IntersectionObserver(function(en){ if(en[0].isIntersecting){ plant.classList.add('play'); pio.disconnect(); } }, {threshold:.6});
+      pio.observe(plant);
+    } else { plant.classList.add('play'); }
+    plant.addEventListener('click', function(){
+      plant.classList.remove('play'); void plant.getBoundingClientRect(); plant.classList.add('play');
+    });
+  }
+
+  // Gota que enche conforme a rolagem
+  var drop = document.createElement('button');
+  drop.className = 'scroll-drop'; drop.setAttribute('aria-label','Ir para os planos');
+  drop.innerHTML = '<svg viewBox="0 0 40 40"><defs><clipPath id="dropClip"><path d="M20 4 C20 4 8 18 8 26 A12 12 0 0 0 32 26 C32 18 20 4 20 4Z"/></clipPath></defs>'
+    + '<g clip-path="url(#dropClip)"><rect x="0" y="0" width="40" height="40" fill="#EAF4F6"/><rect id="dropFill" x="0" y="38" width="40" height="40" fill="#7FA24A"/></g>'
+    + '<path d="M20 4 C20 4 8 18 8 26 A12 12 0 0 0 32 26 C32 18 20 4 20 4Z" fill="none" stroke="#4F772D" stroke-width="2.5"/></svg>';
+  document.body.appendChild(drop);
+  var fill = drop.querySelector('#dropFill');
+  drop.addEventListener('click', function(){ document.getElementById('planos').scrollIntoView({behavior: reduce ? 'auto' : 'smooth'}); });
+  function onScroll(){
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    var p = max > 0 ? Math.min(1, window.scrollY / max) : 0;
+    fill.setAttribute('y', 38 - p * 32);
+    drop.classList.toggle('on', window.scrollY > 300);
+    drop.classList.toggle('full', p > .97);
+  }
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  // Pétalas ao tocar nos botões
+  if(!reduce){
+    document.querySelectorAll('.btn').forEach(function(btn){
+      btn.addEventListener('pointerdown', function(e){
+        for(var i = 0; i < 10; i++){
+          var d = document.createElement('span'); d.className = 'petal-drop';
+          var a = Math.random() * Math.PI * 2, dist = 30 + Math.random() * 50;
+          d.style.left = (e.clientX - 5) + 'px'; d.style.top = (e.clientY - 5) + 'px';
+          d.style.background = PETALS[Math.floor(Math.random() * PETALS.length)];
+          d.style.setProperty('--dx', Math.cos(a) * dist + 'px');
+          d.style.setProperty('--dy', (Math.sin(a) * dist - 20) + 'px');
+          var sz = 6 + Math.random() * 8; d.style.width = sz + 'px'; d.style.height = sz + 'px';
+          document.body.appendChild(d);
+          setTimeout((function(el){ return function(){ el.remove(); }; })(d), 850);
+        }
+      });
+    });
+  }
+
+  // Selo da garantia gira quando aparece
+  var gua = document.querySelector('.guarantee');
+  if(gua && !reduce && 'IntersectionObserver' in window){
+    var gio = new IntersectionObserver(function(en){ if(en[0].isIntersecting){ gua.classList.add('in'); gio.disconnect(); } }, {threshold:.4});
+    gio.observe(gua);
+  }
+})();
+</script>
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var finePointer = window.matchMedia('(pointer: fine)').matches;
+  var PETALS = ['#E8AEB7','#F3C9D0','#90A955','#B4CC7C','#C97C5D'];
+  function onView(el, cb, th){
+    if(!el) return;
+    if(!('IntersectionObserver' in window)){ cb(); return; }
+    var io = new IntersectionObserver(function(en){ if(en[0].isIntersecting){ cb(); io.disconnect(); } }, {threshold: th || .3});
+    io.observe(el);
+  }
+
+  // Ondas entre seções de cores diferentes
+  var secs = [].slice.call(document.querySelectorAll('section'));
+  var wavePath = 'M0 0 H2400 V14 C2350 30 2250 30 2200 14 C2150 -2 2050 -2 2000 14 C1950 30 1850 30 1800 14 C1750 -2 1650 -2 1600 14 C1550 30 1450 30 1400 14 C1350 -2 1250 -2 1200 14 C1150 30 1050 30 1000 14 C950 -2 850 -2 800 14 C750 30 650 30 600 14 C550 -2 450 -2 400 14 C350 30 250 30 200 14 C150 -2 50 -2 0 14 Z';
+  secs.forEach(function(sec, i){
+    if(i === 0) return;
+    var prev = getComputedStyle(secs[i-1]).backgroundColor, cur = getComputedStyle(sec).backgroundColor;
+    if(prev === cur) return;
+    var w = document.createElement('div'); w.className = 'wave'; w.setAttribute('aria-hidden','true');
+    w.innerHTML = '<svg class="w2" viewBox="0 0 2400 38" preserveAspectRatio="none"><path d="' + wavePath + '" transform="translate(0 8)" fill="' + prev + '"/></svg>'
+      + '<svg class="w1" viewBox="0 0 2400 38" preserveAspectRatio="none"><path d="' + wavePath + '" fill="' + prev + '"/></svg>';
+    sec.insertBefore(w, sec.firstChild);
+  });
+
+  // Folhas decorativas nas seções claras
+  var leafSvg = "<svg class=\"stain\" viewBox=\"0 0 120 120\" aria-hidden=\"true\"><path d=\"M14 108C10 58 40 18 108 10c4 62-26 92-94 98z\" fill=\"#4F772D\"/><path d=\"M18 104C48 76 78 46 100 16\" fill=\"none\" stroke=\"#FFF8E7\" stroke-width=\"3\"/></svg>";
+  document.querySelectorAll('.s-sand').forEach(function(sec, i){
+    [[ -30, 60, 150, 12 ], [ null, null, 110, -20 ]].forEach(function(c, j){
+      var d = document.createElement('div'); d.innerHTML = leafSvg; var s = d.firstChild;
+      s.style.width = c[2] + 'px'; s.style.transform = 'rotate(' + (c[3] + i * 30) + 'deg)';
+      if(j === 0){ s.style.left = c[0] + 'px'; s.style.top = c[1] + 'px'; } else { s.style.right = '-24px'; s.style.bottom = '40px'; }
+      sec.appendChild(s);
+    });
+  });
+
+  if(reduce) return;
+
+  // Caderno: sublinhado à mão (estático)
+  var board = document.querySelector('.notebook');
+  if(board){
+    board.querySelector('h3').insertAdjacentHTML('afterend', '<svg class="note-under" viewBox="0 0 280 14" preserveAspectRatio="none"><path d="M4 9 C60 3 120 12 180 6 C220 3 250 8 276 5" fill="none" stroke="#E8AEB7" stroke-width="3" stroke-linecap="round"/></svg>');
+  }
+
+  // Seiva subindo pela linha do tempo
+  var tlWrap = document.querySelector('.timeline');
+  if(tlWrap){
+    tlWrap.insertAdjacentHTML('afterbegin', '<div class="drip-track" aria-hidden="true"><div class="drip-fill"></div><div class="drip-drop"></div></div>');
+    var steps = tlWrap.querySelectorAll('.tl');
+    function drip(){
+      var r = tlWrap.getBoundingClientRect(), vh = window.innerHeight;
+      var p = Math.max(0, Math.min(1, (vh * .75 - r.top) / (r.height + vh * .1)));
+      tlWrap.style.setProperty('--p', p.toFixed(3));
+      steps.forEach(function(s, i){ var on = p >= (i + .5) / steps.length; if(on && !s.classList.contains('lit')) s.classList.add('lit'); });
+    }
+    window.addEventListener('scroll', drip, {passive:true}); drip();
+  }
+
+  // Tilt 3D com reflexo nos cards
+  if(finePointer){
+    document.querySelectorAll('.bonus-card, .step, .stat, .grade-box').forEach(function(card){
+      card.classList.add('tilt');
+      var g = document.createElement('span'); g.className = 'glare'; card.appendChild(g);
+      if(getComputedStyle(card).position === 'static') card.style.position = 'relative';
+      card.addEventListener('pointermove', function(e){
+        var r = card.getBoundingClientRect(), x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+        card.style.transform = 'perspective(700px) rotateY(' + ((x - .5) * 16) + 'deg) rotateX(' + ((.5 - y) * 14) + 'deg) translateZ(10px)';
+        card.style.setProperty('--gx', x * 100 + '%'); card.style.setProperty('--gy', y * 100 + '%');
+      });
+      card.addEventListener('pointerleave', function(){ card.style.transform = ''; });
+    });
+  }
+
+  // Preço caindo do valor antigo até o preço de hoje
+  document.querySelectorAll('.plan').forEach(function(plan){
+    var el = plan.querySelector('.plan-price .new'), old = plan.querySelector('.plan-price s');
+    if(!el || !old) return;
+    var target = parseFloat(el.textContent.replace(/[^\d,]/g, '').replace(',', '.'));
+    var from = parseFloat(old.textContent.replace(/[^\d,]/g, '').replace(',', '.'));
+    onView(plan, function(){
+      var t0 = performance.now(), dur = 1300;
+      (function step(now){
+        var k = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - k, 3);
+        var v = from + (target - from) * e, int = Math.floor(v), cents = Math.round((v - int) * 100);
+        if(cents === 100){ int++; cents = 0; }
+        el.innerHTML = 'R$ ' + int + '<small>,' + String(cents).padStart(2, '0') + '</small>';
+        if(k < 1) requestAnimationFrame(step);
+        else { el.innerHTML = 'R$ ' + Math.floor(target) + '<small>,' + String(Math.round((target % 1) * 100)).padStart(2, '0') + '</small>'; plan.classList.add('counted'); }
+      })(t0);
+    }, .45);
+  });
+
+  // Explosão de pétalas quando a oferta aparece
+  var offer = document.getElementById('planos'), dunk = document.querySelector('.dunk');
+  onView(dunk, function(){
+    var or = offer.getBoundingClientRect(), dr = dunk.getBoundingClientRect();
+    var cx = dr.left - or.left + dr.width / 2, cy = dr.top - or.top + dr.height * .45;
+    var petals = [];
+    for(var i = 0; i < 26; i++){
+      var b = document.createElement('span'); b.className = 'burst-petal';
+      b.style.background = PETALS[Math.floor(Math.random() * PETALS.length)];
+      offer.appendChild(b);
+      var a = -Math.PI / 2 + (Math.random() - .5) * 2.4, sp = 6 + Math.random() * 7;
+      petals.push({el:b, x:cx, y:cy, vx:Math.cos(a) * sp, vy:Math.sin(a) * sp, r:Math.random() * 360, vr:(Math.random() - .5) * 30, life:0});
+    }
+    (function step(){
+      var alive = false;
+      petals.forEach(function(p){
+        p.vy += .38; p.x += p.vx; p.y += p.vy; p.r += p.vr; p.life++;
+        var o = Math.max(0, 1 - p.life / 90);
+        p.el.style.transform = 'translate(' + p.x + 'px,' + p.y + 'px) rotate(' + p.r + 'deg)';
+        p.el.style.opacity = o;
+        if(o > 0) alive = true; else if(p.el.parentNode) p.el.remove();
+      });
+      if(alive) requestAnimationFrame(step);
+    })();
+  }, .8);
+
+  // Vaso final crescendo
+  var big = document.getElementById('bigPlant');
+  onView(big, function(){ big.classList.add('in'); }, .5);
+
+  // Regador volta a regar de tempos em tempos
+  var plant = document.getElementById('heroPlant');
+  if(plant){
+    setInterval(function(){
+      var r = plant.getBoundingClientRect();
+      if(r.top < window.innerHeight && r.bottom > 0 && !document.hidden){
+        plant.classList.remove('play'); void plant.getBoundingClientRect(); plant.classList.add('play');
+      }
+    }, 15000);
+  }
+
+  // Trilha de pétalas seguindo o mouse (desktop)
+  if(finePointer){
+    var last = 0;
+    window.addEventListener('pointermove', function(e){
+      var now = performance.now(); if(now - last < 55) return; last = now;
+      var b = document.createElement('span'); b.className = 'trail-petal';
+      b.style.background = PETALS[Math.floor(Math.random() * PETALS.length)];
+      b.style.left = (e.clientX - 5) + 'px'; b.style.top = (e.clientY - 5) + 'px';
+      document.body.appendChild(b); setTimeout(function(){ b.remove(); }, 950);
+    }, {passive:true});
+  }
+})();
+</script>
+</body>
+</html>
