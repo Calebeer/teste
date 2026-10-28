@@ -7,6 +7,13 @@
 <meta name="description" content="Um guia completo para aprender rega, iluminação, adubação, mudas e cuidados essenciais para suas plantas crescerem fortes e cheias de vida."/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/><link href="https://fonts.gstatic.com" rel="preconnect" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800;900&family=Cormorant+Garamond:ital,wght@1,600;1,700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1433413658160097');
+fbq('track','PageView');
+</script>
+<!-- End Meta Pixel -->
 <style>
 :root{
   --leaf:#4F772D;
@@ -579,6 +586,7 @@ section{position:relative;}
 </style>
 </head>
 <body>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1433413658160097&ev=PageView&noscript=1" alt=""/></noscript>
 <div class="ribbon-bar"><span>🌱 Oferta especial — termina hoje <span id="ribbon-date">(--/--)</span></span><span class="timer" id="timer-ribbon">10:00</span></div>
 
 <!-- HERO -->
@@ -1011,6 +1019,23 @@ document.querySelectorAll('.cf').forEach(function(wrap){
   var total = 10*60, a = document.getElementById('timer-ribbon'), b = document.getElementById('timer-plans');
   function r(){ var t = String(Math.floor(total/60)).padStart(2,'0') + ':' + String(total%60).padStart(2,'0'); a.textContent = t; b.textContent = t; }
   r(); setInterval(function(){ total = Math.max(0, total-1); r(); }, 1000);
+})();
+</script>
+// Meta Pixel: eventos de conversão
+(function(){
+  function track(name, data){ try{ if(window.fbq) fbq('track', name, data || {}); }catch(e){} }
+  var map = { 'btn-completo':{content_name:'Jardim Saudável Premium',value:19.90,currency:'BRL'},
+              'upsell-accept':{content_name:'Jardim Saudável Premium (upgrade)',value:19.90,currency:'BRL'},
+              'upsell-decline':{content_name:'Manual da Planta Saudável',value:10.00,currency:'BRL'} };
+  Object.keys(map).forEach(function(id){
+    var el = document.getElementById(id);
+    if(el) el.addEventListener('click', function(){ track('InitiateCheckout', map[id]); });
+  });
+  var planos = document.getElementById('planos');
+  if(planos && 'IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(en){ if(en[0].isIntersecting){ track('ViewContent',{content_name:'Planos'}); io.disconnect(); } }, {threshold:.3});
+    io.observe(planos);
+  }
 })();
 </script>
 <script>
